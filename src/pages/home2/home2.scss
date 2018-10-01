@@ -1,0 +1,59 @@
+page-home2 {
+  .wide-as-needed {
+    overflow: scroll;
+    white-space: nowrap;
+  }
+  // .scroll { 
+  //   min-width: 100%;
+  // }
+
+  ion-card {
+    width: 100px ;
+    height: 150px;
+    display: inline-block;
+}
+.action-col{
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  
+ // height: 80px;
+ 
+}
+.action-row{
+ margin-bottom: 3400px;
+}
+.col{width:50%;
+}
+.card{
+  background: color($colors, favorite);
+  
+    //position: relative;
+ // text-align: center;
+ // widows: 300px;
+  margin: auto ;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px
+  //	box-shadow: none;
+  
+}
+
+.item{
+  background: color($colors, favorite);
+  border-top: none;
+  border-bottom:none;
+  margin-top: -3px;
+  margin-bottom: -8px;
+//   display: inline-block;
+//   //margin:auto;
+//  font-size: 0 ;
+//   //white-space:wrap;
+//  // height:15px;
+}
+p {
+   /* à modifier selon vos besoins */
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+}

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Chatroom",
+    "\\obj",
+    "\\src",
+    "\\src\\app",
+    "\\src\\providers",
+    "\\src\\providers\\login"
+  ],
+  "SelectedNode": "\\src\\app\\app.module.ts",
+  "PreviewInSolutionExplorer": false
+}

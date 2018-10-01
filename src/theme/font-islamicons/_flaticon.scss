@@ -1,0 +1,122 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:21
+    */
+
+   // $fa-font-path:"../assets/fonts" !default;
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("../assets/fonts/Flaticon.eot");
+  src: url("../assets/fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../assets/fonts/Flaticon.woff") format("woff"),
+       url("../assets/fonts/Flaticon.ttf") format("truetype"),
+       url("../assets/fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../assets/fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  //font-smoothing: antialiased;
+    }
+
+.flaticon-allah-word:before { content: "\f100"; }
+.flaticon-arabic-art:before { content: "\f101"; }
+.flaticon-arabic-design:before { content: "\f102"; }
+.flaticon-arabic-teapot:before { content: "\f103"; }
+.flaticon-crescent-moon-and-star:before { content: "\f104"; }
+.flaticon-crescent-moon-stars-and-cloud:before { content: "\f105"; }
+.flaticon-desert-sun-rising:before { content: "\f106"; }
+.flaticon-dromedary-looking-right:before { content: "\f107"; }
+
+.flaticon-dua-hands:before,
+.ion-ios-flaticon-dua-hands:before ,
+.ion-ios-flaticon-dua-hands-outline:before ,
+.ion-md-flaticon-dua-hands:before ,
+.ion-md-flaticon-dua-hands-outline:before { content: "\f108"; font-family:Flaticon;}
+
+.flaticon-genie-lamp:before,
+.ion-ios-flaticon-genie-lamp:before ,
+.ion-ios-flaticon-genie-lamp-outline:before ,
+.ion-md-flaticon-genie-lamp:before ,
+.ion-md-flaticon-genie-lamp-outline:before { content: "\f109"; font-family:Flaticon;}
+
+/*.flaticon-genie-lamp:before { content: "\f109"; }*/
+.flaticon-halal-sign:before { content: "\f10a"; }
+.flaticon-holy-quran:before { content: "\f10b"; }
+.flaticon-islamic-lantern:before { content: "\f10c"; }
+
+.flaticon-kaaba-mecca:before,
+.ion-ios-flaticon-kaaba-mecca:before ,
+.ion-ios-flaticon-kaaba-mecca-outline:before ,
+.ion-md-flaticon-kaaba-mecca:before ,
+.ion-md-flaticon-kaaba-mecca-outline:before { content: "\f10d"; font-family:Flaticon;}
+
+/*.flaticon-kaaba-mecca:before
+.ion-ios-flaticon-kaaba-mecca:before ,
+.ion-ios-flaticon-kaaba-mecca-outline:before ,
+.ion-md-flaticon-kaaba-mecca:before ,
+.ion-md-flaticon-kaaba-mecca-outline:before { content: "\f10d"; font-family:Flaticon;} */
+
+.flaticon-magic-carpet:before { content: "\f10e"; }
+
+.flaticon-medina-sherif:before,
+.ion-ios-flaticon-medina-sherif:before ,
+.ion-ios-flaticon-medina-sherif-outline:before ,
+.ion-md-flaticon-medina-sherif:before ,
+.ion-md-flaticon-medina-sherif-outline:before { content: "\f10f"; font-family:Flaticon;}
+
+/*.flaticon-medina-sherif:before { content: "\f10f"; }*/
+.flaticon-mosque-domes:before { content: "\f110"; }
+.flaticon-muhammad-word:before { content: "\f111"; }
+.flaticon-muslim-cap:before { content: "\f112"; }
+.flaticon-muslim-tasbih:before { content: "\f113"; }
+.flaticon-palm-tree-with-date:before { content: "\f114"; }
+.flaticon-praying-mat:before { content: "\f115"; }
+.flaticon-qibla-compass:before { content: "\f116"; }
+.flaticon-reading-quran:before { content: "\f117"; }
+.flaticon-sahada-one-god:before { content: "\f118"; }
+    
+    $font-Flaticon-allah-word: "\f100";
+    $font-Flaticon-arabic-art: "\f101";
+    $font-Flaticon-arabic-design: "\f102";
+    $font-Flaticon-arabic-teapot: "\f103";
+    $font-Flaticon-crescent-moon-and-star: "\f104";
+    $font-Flaticon-crescent-moon-stars-and-cloud: "\f105";
+    $font-Flaticon-desert-sun-rising: "\f106";
+    $font-Flaticon-dromedary-looking-right: "\f107";
+    $font-Flaticon-dua-hands: "\f108";
+    $font-Flaticon-genie-lamp: "\f109";
+    $font-Flaticon-halal-sign: "\f10a";
+    $font-Flaticon-holy-quran: "\f10b";
+    $font-Flaticon-islamic-lantern: "\f10c";
+    $font-Flaticon-kaaba-mecca: "\f10d";
+    $font-Flaticon-magic-carpet: "\f10e";
+    $font-Flaticon-medina-sherif: "\f10f";
+    $font-Flaticon-mosque-domes: "\f110";
+    $font-Flaticon-muhammad-word: "\f111";
+    $font-Flaticon-muslim-cap: "\f112";
+    $font-Flaticon-muslim-tasbih: "\f113";
+    $font-Flaticon-palm-tree-with-date: "\f114";
+    $font-Flaticon-praying-mat: "\f115";
+    $font-Flaticon-qibla-compass: "\f116";
+    $font-Flaticon-reading-quran: "\f117";
+    $font-Flaticon-sahada-one-god: "\f118";

@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{19f74efe-a3e9-4a28-98ec-88b4b11fb313}</ProjectGuid>
+        <ProjectHome />
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile />
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <TypeScriptSourceMap>true</TypeScriptSourceMap>
+        <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+        <EnableTypeScript>true</EnableTypeScript>
+        <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="ionic.config.json" />
+        <Content Include="ionic.starter.json" />
+        <Content Include="package-lock.json" />
+        <Content Include="package.json" />
+        <Content Include="tsconfig.json" />
+        <Content Include="tslint.json" />
+        <Content Include="config.xml" />
+        <Content Include="plugins\android.json" />
+        <Content Include="plugins\fetch.json" />
+        <Content Include="resources\icon.png" />
+        <Content Include="resources\splash.png" />
+        <Content Include="resources\README.md" />
+        <Content Include="src\index.html" />
+        <Content Include="src\manifest.json" />
+        <Compile Include="src\service-worker.js" />
+        <Content Include="www\index.html" />
+        <Content Include="www\manifest.json" />
+        <Compile Include="www\service-worker.js" />
+        <Content Include="platforms\android\android.json" />
+        <Content Include="platforms\android\cordova\defaults.xml" />
+        <Compile Include="platforms\android\cordova\Api.js" />
+        <Compile Include="platforms\android\cordova\loggingHelper.js" />
+        <Content Include="platforms\android\CordovaLib\AndroidManifest.xml" />
+        <Compile Include="platforms\android\platform_www\cordova.js" />
+        <Compile Include="platforms\android\platform_www\cordova_plugins.js" />
+        <Content Include="platforms\android\app\src\main\AndroidManifest.xml" />
+        <Compile Include="platforms\android\app\src\main\assets\www\cordova.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\cordova_plugins.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\cordova-js-src\exec.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\cordova-js-src\platform.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\cordova-js-src\android\nativeapiprovider.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\cordova-js-src\android\promptbasednativeapi.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\cordova-js-src\plugin\android\app.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-device\www\device.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-ionic-keyboard\www\android\keyboard.js" />
+        <Compile Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-splashscreen\www\splashscreen.js" />
+        <Content Include="platforms\android\app\src\main\res\drawable-land-hdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-land-ldpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-land-mdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-land-xhdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-land-xxhdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-land-xxxhdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-port-hdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-port-ldpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-port-mdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-port-xhdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-port-xxhdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\drawable-port-xxxhdpi\screen.png" />
+        <Content Include="platforms\android\app\src\main\res\mipmap-hdpi\icon.png" />
+        <Content Include="platforms\android\app\src\main\res\mipmap-ldpi\icon.png" />
+        <Content Include="platforms\android\app\src\main\res\mipmap-mdpi\icon.png" />
+        <Content Include="platforms\android\app\src\main\res\mipmap-xhdpi\icon.png" />
+        <Content Include="platforms\android\app\src\main\res\mipmap-xxhdpi\icon.png" />
+        <Content Include="platforms\android\app\src\main\res\mipmap-xxxhdpi\icon.png" />
+        <Content Include="platforms\android\app\src\main\res\values\strings.xml" />
+        <Content Include="platforms\android\app\src\main\res\xml\config.xml" />
+        <Compile Include="platforms\android\cordova\lib\Adb.js" />
+        <Compile Include="platforms\android\cordova\lib\AndroidManifest.js" />
+        <Compile Include="platforms\android\cordova\lib\AndroidProject.js" />
+        <Compile Include="platforms\android\cordova\lib\AndroidStudio.js" />
+        <Compile Include="platforms\android\cordova\lib\android_sdk.js" />
+        <Compile Include="platforms\android\cordova\lib\build.js" />
+        <Compile Include="platforms\android\cordova\lib\check_reqs.js" />
+        <Compile Include="platforms\android\cordova\lib\device.js" />
+        <Compile Include="platforms\android\cordova\lib\emulator.js" />
+        <Compile Include="platforms\android\cordova\lib\log.js" />
+        <Compile Include="platforms\android\cordova\lib\pluginHandlers.js" />
+        <Compile Include="platforms\android\cordova\lib\prepare.js" />
+        <Compile Include="platforms\android\cordova\lib\retry.js" />
+        <Compile Include="platforms\android\cordova\lib\run.js" />
+        <Compile Include="platforms\android\cordova\lib\builders\builders.js" />
+        <Compile Include="platforms\android\cordova\lib\builders\GenericBuilder.js" />
+        <Compile Include="platforms\android\cordova\lib\builders\GradleBuilder.js" />
+        <Compile Include="platforms\android\cordova\lib\builders\StudioBuilder.js" />
+        <Compile Include="platforms\android\platform_www\cordova-js-src\exec.js" />
+        <Compile Include="platforms\android\platform_www\cordova-js-src\platform.js" />
+        <Compile Include="platforms\android\platform_www\cordova-js-src\android\nativeapiprovider.js" />
+        <Compile Include="platforms\android\platform_www\cordova-js-src\android\promptbasednativeapi.js" />
+        <Compile Include="platforms\android\platform_www\cordova-js-src\plugin\android\app.js" />
+        <Compile Include="platforms\android\platform_www\plugins\cordova-plugin-device\www\device.js" />
+        <Compile Include="platforms\android\platform_www\plugins\cordova-plugin-ionic-keyboard\www\android\keyboard.js" />
+        <Compile Include="platforms\android\platform_www\plugins\cordova-plugin-splashscreen\www\splashscreen.js" />
+        <Content Include="plugins\cordova-plugin-device\package.json" />
+        <Content Include="plugins\cordova-plugin-device\CONTRIBUTING.md" />
+        <Content Include="plugins\cordova-plugin-device\README.md" />
+        <Content Include="plugins\cordova-plugin-device\RELEASENOTES.md" />
+        <Content Include="plugins\cordova-plugin-device\plugin.xml" />
+        <Content Include="plugins\cordova-plugin-ionic-keyboard\package.json" />
+        <Content Include="plugins\cordova-plugin-ionic-keyboard\README.md" />
+        <Content Include="plugins\cordova-plugin-ionic-keyboard\plugin.xml" />
+        <Content Include="plugins\cordova-plugin-ionic-webview\package.json" />
+        <Content Include="plugins\cordova-plugin-ionic-webview\README.md" />
+        <Content Include="plugins\cordova-plugin-ionic-webview\RELEASENOTES.md" />
+        <Content Include="plugins\cordova-plugin-ionic-webview\plugin.xml" />
+        <Content Include="plugins\cordova-plugin-splashscreen\package.json" />
+        <Content Include="plugins\cordova-plugin-splashscreen\CONTRIBUTING.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\RELEASENOTES.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\plugin.xml" />
+        <Content Include="plugins\cordova-plugin-whitelist\package.json" />
+        <Content Include="plugins\cordova-plugin-whitelist\CONTRIBUTING.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\RELEASENOTES.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\plugin.xml" />
+        <Content Include="plugins\cordova-plugin-device\tests\package.json" />
+        <Content Include="plugins\cordova-plugin-device\tests\plugin.xml" />
+        <Compile Include="plugins\cordova-plugin-device\tests\tests.js" />
+        <TypeScriptCompile Include="plugins\cordova-plugin-device\types\index.d.ts" />
+        <Compile Include="plugins\cordova-plugin-device\www\device.js" />
+        <Content Include="plugins\cordova-plugin-device\doc\de\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\de\README.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\es\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\es\README.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\fr\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\fr\README.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\it\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\it\README.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\ja\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\ja\README.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\ko\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\ko\README.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\pl\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\pl\README.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\ru\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\zh\index.md" />
+        <Content Include="plugins\cordova-plugin-device\doc\zh\README.md" />
+        <Compile Include="plugins\cordova-plugin-device\src\browser\DeviceProxy.js" />
+        <Compile Include="plugins\cordova-plugin-device\src\windows\DeviceProxy.js" />
+        <Compile Include="plugins\cordova-plugin-ionic-keyboard\www\android\keyboard.js" />
+        <Compile Include="plugins\cordova-plugin-ionic-keyboard\www\ios\keyboard.js" />
+        <Compile Include="plugins\cordova-plugin-ionic-webview\src\ios\wk-plugin.js" />
+        <Compile Include="plugins\cordova-plugin-ionic-webview\src\www\ios\ios-wkwebview-exec.js" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\package.json" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\plugin.xml" />
+        <Compile Include="plugins\cordova-plugin-splashscreen\tests\tests.js" />
+        <TypeScriptCompile Include="plugins\cordova-plugin-splashscreen\types\index.d.ts" />
+        <Compile Include="plugins\cordova-plugin-splashscreen\www\splashscreen.js" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\de\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\de\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\es\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\es\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\fr\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\fr\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\it\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\it\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\ja\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\ja\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\ko\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\ko\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\pl\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\pl\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\ru\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\zh\index.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\doc\zh\README.md" />
+        <Compile Include="plugins\cordova-plugin-splashscreen\src\browser\SplashScreenProxy.js" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\package.json" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\de\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\es\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\fr\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\it\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\ja\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\ko\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\pl\README.md" />
+        <Content Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\zh\README.md" />
+        <Compile Include="plugins\cordova-plugin-splashscreen\www\windows\SplashScreenProxy.js" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\de\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\es\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\fr\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\it\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\ja\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\ko\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\pl\README.md" />
+        <Content Include="plugins\cordova-plugin-whitelist\doc\zh\README.md" />
+        <Content Include="resources\android\icon\drawable-hdpi-icon.png" />
+        <Content Include="resources\android\icon\drawable-ldpi-icon.png" />
+        <Content Include="resources\android\icon\drawable-mdpi-icon.png" />
+        <Content Include="resources\android\icon\drawable-xhdpi-icon.png" />
+        <Content Include="resources\android\icon\drawable-xxhdpi-icon.png" />
+        <Content Include="resources\android\icon\drawable-xxxhdpi-icon.png" />
+        <Content Include="resources\android\splash\drawable-land-hdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-land-ldpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-land-mdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-land-xhdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-land-xxhdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-land-xxxhdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-port-hdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-port-ldpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-port-mdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-port-xhdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-port-xxhdpi-screen.png" />
+        <Content Include="resources\android\splash\drawable-port-xxxhdpi-screen.png" />
+        <Content Include="resources\ios\icon\icon-1024.png" />
+        <Content Include="resources\ios\icon\icon-40.png" />
+        <Content Include="resources\ios\icon\icon-40@2x.png" />
+        <Content Include="resources\ios\icon\icon-40@3x.png" />
+        <Content Include="resources\ios\icon\icon-50.png" />
+        <Content Include="resources\ios\icon\icon-50@2x.png" />
+        <Content Include="resources\ios\icon\icon-60.png" />
+        <Content Include="resources\ios\icon\icon-60@2x.png" />
+        <Content Include="resources\ios\icon\icon-60@3x.png" />
+        <Content Include="resources\ios\icon\icon-72.png" />
+        <Content Include="resources\ios\icon\icon-72@2x.png" />
+        <Content Include="resources\ios\icon\icon-76.png" />
+        <Content Include="resources\ios\icon\icon-76@2x.png" />
+        <Content Include="resources\ios\icon\icon-83.5@2x.png" />
+        <Content Include="resources\ios\icon\icon-small.png" />
+        <Content Include="resources\ios\icon\icon-small@2x.png" />
+        <Content Include="resources\ios\icon\icon-small@3x.png" />
+        <Content Include="resources\ios\icon\icon.png" />
+        <Content Include="resources\ios\icon\icon@2x.png" />
+        <Content Include="resources\ios\splash\Default-568h@2x~iphone.png" />
+        <Content Include="resources\ios\splash\Default-667h.png" />
+        <Content Include="resources\ios\splash\Default-736h.png" />
+        <Content Include="resources\ios\splash\Default-Landscape-736h.png" />
+        <Content Include="resources\ios\splash\Default-Landscape@2x~ipad.png" />
+        <Content Include="resources\ios\splash\Default-Landscape@~ipadpro.png" />
+        <Content Include="resources\ios\splash\Default-Landscape~ipad.png" />
+        <Content Include="resources\ios\splash\Default-Portrait@2x~ipad.png" />
+        <Content Include="resources\ios\splash\Default-Portrait@~ipadpro.png" />
+        <Content Include="resources\ios\splash\Default-Portrait~ipad.png" />
+        <Content Include="resources\ios\splash\Default@2x~iphone.png" />
+        <Content Include="resources\ios\splash\Default@2x~universal~anyany.png" />
+        <Content Include="resources\ios\splash\Default~iphone.png" />
+        <Content Include="src\app\app.html" />
+        <TypeScriptCompile Include="src\app\app.component.ts" />
+        <TypeScriptCompile Include="src\app\app.module.ts" />
+        <TypeScriptCompile Include="src\app\main.ts" />
+        <Content Include="src\assets\icon\favicon.ico" />
+        <Content Include="src\assets\imgs\logo.png" />
+        <Content Include="src\pages\about\about.html" />
+        <TypeScriptCompile Include="src\pages\about\about.ts" />
+        <Content Include="src\pages\contact\contact.html" />
+        <TypeScriptCompile Include="src\pages\contact\contact.ts" />
+        <Content Include="src\pages\home\home.html" />
+        <TypeScriptCompile Include="src\pages\home\home.ts" />
+        <Content Include="src\pages\tabs\tabs.html" />
+        <TypeScriptCompile Include="src\pages\tabs\tabs.ts" />
+        <Content Include="src\pages\test\tabtest.html" />
+        <TypeScriptCompile Include="src\pages\test\tabtest.ts" />
+        <Content Include="www\build\main.css" />
+        <Compile Include="www\build\main.js" />
+        <Compile Include="www\build\polyfills.js" />
+        <Compile Include="www\build\sw-toolbox.js" />
+        <Compile Include="www\build\vendor.js" />
+        <Content Include="www\assets\fonts\ionicons.svg" />
+        <Content Include="www\assets\icon\favicon.ico" />
+        <Content Include="www\assets\imgs\logo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Chatroom" />
+        <Folder Include="platforms" />
+        <Folder Include="platforms\android" />
+        <Folder Include="platforms\android\app" />
+        <Folder Include="platforms\android\app\src" />
+        <Folder Include="platforms\android\app\src\main" />
+        <Folder Include="platforms\android\app\src\main\assets" />
+        <Folder Include="platforms\android\app\src\main\assets\www" />
+        <Folder Include="platforms\android\app\src\main\assets\www\cordova-js-src" />
+        <Folder Include="platforms\android\app\src\main\assets\www\cordova-js-src\android" />
+        <Folder Include="platforms\android\app\src\main\assets\www\cordova-js-src\plugin" />
+        <Folder Include="platforms\android\app\src\main\assets\www\cordova-js-src\plugin\android" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-device" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-device\www" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-ionic-keyboard" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-ionic-keyboard\www" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-ionic-keyboard\www\android" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-splashscreen" />
+        <Folder Include="platforms\android\app\src\main\assets\www\plugins\cordova-plugin-splashscreen\www" />
+        <Folder Include="platforms\android\app\src\main\java" />
+        <Folder Include="platforms\android\app\src\main\java\io" />
+        <Folder Include="platforms\android\app\src\main\java\io\ionic" />
+        <Folder Include="platforms\android\app\src\main\java\io\ionic\keyboard" />
+        <Folder Include="platforms\android\app\src\main\java\io\ionic\starter" />
+        <Folder Include="platforms\android\app\src\main\java\org" />
+        <Folder Include="platforms\android\app\src\main\java\org\apache" />
+        <Folder Include="platforms\android\app\src\main\java\org\apache\cordova" />
+        <Folder Include="platforms\android\app\src\main\java\org\apache\cordova\device" />
+        <Folder Include="platforms\android\app\src\main\java\org\apache\cordova\splashscreen" />
+        <Folder Include="platforms\android\app\src\main\java\org\apache\cordova\whitelist" />
+        <Folder Include="platforms\android\app\src\main\libs" />
+        <Folder Include="platforms\android\app\src\main\res" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-land-hdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-land-ldpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-land-mdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-land-xhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-land-xxhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-land-xxxhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-port-hdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-port-ldpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-port-mdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-port-xhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-port-xxhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\drawable-port-xxxhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\mipmap-hdpi" />
+        <Folder Include="platforms\android\app\src\main\res\mipmap-ldpi" />
+        <Folder Include="platforms\android\app\src\main\res\mipmap-mdpi" />
+        <Folder Include="platforms\android\app\src\main\res\mipmap-xhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\mipmap-xxhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\mipmap-xxxhdpi" />
+        <Folder Include="platforms\android\app\src\main\res\values" />
+        <Folder Include="platforms\android\app\src\main\res\xml" />
+        <Folder Include="platforms\android\cordova" />
+        <Folder Include="platforms\android\cordova\lib" />
+        <Folder Include="platforms\android\cordova\lib\builders" />
+        <Folder Include="platforms\android\CordovaLib" />
+        <Folder Include="platforms\android\CordovaLib\src" />
+        <Folder Include="platforms\android\CordovaLib\src\org" />
+        <Folder Include="platforms\android\CordovaLib\src\org\apache" />
+        <Folder Include="platforms\android\CordovaLib\src\org\apache\cordova" />
+        <Folder Include="platforms\android\CordovaLib\src\org\apache\cordova\engine" />
+        <Folder Include="platforms\android\platform_www" />
+        <Folder Include="platforms\android\platform_www\cordova-js-src" />
+        <Folder Include="platforms\android\platform_www\cordova-js-src\android" />
+        <Folder Include="platforms\android\platform_www\cordova-js-src\plugin" />
+        <Folder Include="platforms\android\platform_www\cordova-js-src\plugin\android" />
+        <Folder Include="platforms\android\platform_www\plugins" />
+        <Folder Include="platforms\android\platform_www\plugins\cordova-plugin-device" />
+        <Folder Include="platforms\android\platform_www\plugins\cordova-plugin-device\www" />
+        <Folder Include="platforms\android\platform_www\plugins\cordova-plugin-ionic-keyboard" />
+        <Folder Include="platforms\android\platform_www\plugins\cordova-plugin-ionic-keyboard\www" />
+        <Folder Include="platforms\android\platform_www\plugins\cordova-plugin-ionic-keyboard\www\android" />
+        <Folder Include="platforms\android\platform_www\plugins\cordova-plugin-splashscreen" />
+        <Folder Include="platforms\android\platform_www\plugins\cordova-plugin-splashscreen\www" />
+        <Folder Include="plugins" />
+        <Folder Include="plugins\cordova-plugin-device" />
+        <Folder Include="plugins\cordova-plugin-device\doc" />
+        <Folder Include="plugins\cordova-plugin-device\doc\de" />
+        <Folder Include="plugins\cordova-plugin-device\doc\es" />
+        <Folder Include="plugins\cordova-plugin-device\doc\fr" />
+        <Folder Include="plugins\cordova-plugin-device\doc\it" />
+        <Folder Include="plugins\cordova-plugin-device\doc\ja" />
+        <Folder Include="plugins\cordova-plugin-device\doc\ko" />
+        <Folder Include="plugins\cordova-plugin-device\doc\pl" />
+        <Folder Include="plugins\cordova-plugin-device\doc\ru" />
+        <Folder Include="plugins\cordova-plugin-device\doc\zh" />
+        <Folder Include="plugins\cordova-plugin-device\src" />
+        <Folder Include="plugins\cordova-plugin-device\src\android" />
+        <Folder Include="plugins\cordova-plugin-device\src\browser" />
+        <Folder Include="plugins\cordova-plugin-device\src\ios" />
+        <Folder Include="plugins\cordova-plugin-device\src\osx" />
+        <Folder Include="plugins\cordova-plugin-device\src\windows" />
+        <Folder Include="plugins\cordova-plugin-device\tests" />
+        <Folder Include="plugins\cordova-plugin-device\types" />
+        <Folder Include="plugins\cordova-plugin-device\www" />
+        <Folder Include="plugins\cordova-plugin-ionic-keyboard" />
+        <Folder Include="plugins\cordova-plugin-ionic-keyboard\src" />
+        <Folder Include="plugins\cordova-plugin-ionic-keyboard\src\android" />
+        <Folder Include="plugins\cordova-plugin-ionic-keyboard\src\ios" />
+        <Folder Include="plugins\cordova-plugin-ionic-keyboard\www" />
+        <Folder Include="plugins\cordova-plugin-ionic-keyboard\www\android" />
+        <Folder Include="plugins\cordova-plugin-ionic-keyboard\www\ios" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src\ios" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src\ios\GCDWebServer" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src\ios\GCDWebServer\Core" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src\ios\GCDWebServer\Requests" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src\ios\GCDWebServer\Responses" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src\www" />
+        <Folder Include="plugins\cordova-plugin-ionic-webview\src\www\ios" />
+        <Folder Include="plugins\cordova-plugin-splashscreen" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\de" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\es" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\fr" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\it" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\ja" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\ko" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\pl" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\ru" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\doc\zh" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\src" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\src\android" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\src\browser" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\src\ios" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\src\wp" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest.xcworkspace" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest.xcworkspace\xcshareddata" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest.xcworkspace\xcshareddata\xcschemes" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest\CDVSplashScreenLibTests" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest\CDVSplashScreenTest.xcodeproj" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest\CDVSplashScreenTest.xcodeproj\project.xcworkspace" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest\CDVSplashScreenTest.xcodeproj\project.xcworkspace\xcshareddata" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest\CDVSplashScreenTest.xcodeproj\xcshareddata" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\CDVSplashScreenTest\CDVSplashScreenTest.xcodeproj\xcshareddata\xcschemes" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\de" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\es" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\fr" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\it" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\ja" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\ko" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\pl" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\tests\ios\doc\zh" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\types" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\www" />
+        <Folder Include="plugins\cordova-plugin-splashscreen\www\windows" />
+        <Folder Include="plugins\cordova-plugin-whitelist" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\de" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\es" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\fr" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\it" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\ja" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\ko" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\pl" />
+        <Folder Include="plugins\cordova-plugin-whitelist\doc\zh" />
+        <Folder Include="plugins\cordova-plugin-whitelist\src" />
+        <Folder Include="plugins\cordova-plugin-whitelist\src\android" />
+        <Folder Include="resources" />
+        <Folder Include="resources\android" />
+        <Folder Include="resources\android\icon" />
+        <Folder Include="resources\android\splash" />
+        <Folder Include="resources\ios" />
+        <Folder Include="resources\ios\icon" />
+        <Folder Include="resources\ios\splash" />
+        <Folder Include="src" />
+        <Folder Include="src\app" />
+        <Folder Include="src\assets" />
+        <Folder Include="src\assets\icon" />
+        <Folder Include="src\assets\imgs" />
+        <Folder Include="src\pages" />
+        <Folder Include="src\pages\about" />
+        <Folder Include="src\pages\contact" />
+        <Folder Include="src\pages\home" />
+        <Folder Include="src\pages\tabs" />
+        <Folder Include="src\pages\test" />
+        <Folder Include="src\theme" />
+        <Folder Include="www" />
+        <Folder Include="www\assets" />
+        <Folder Include="www\assets\fonts" />
+        <Folder Include="www\assets\icon" />
+        <Folder Include="www\assets\imgs" />
+        <Folder Include="www\build" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>

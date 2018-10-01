@@ -1,0 +1,34 @@
+.navlogo {
+  height:40px;
+  margin-left:10px;
+  float:left;
+}
+page-welcome {
+  #welcomePage {
+    background: color($colors, secondary);
+
+    h1 {
+      font-size: 30px;
+      margin-top: 50px;
+      // margin-left: 160px;
+      //margin:60px;
+      // margin-left :60px;
+    }
+
+    .marginTop {
+      margin-top: 150px;
+     // margin: center;
+      //margin:50px;
+    }
+
+    .logo {
+      height: 100px;
+      margin-top: 50px;
+     // width: 150px ;
+      //margin:auto;
+      // width: 100%;
+      //resize: both 50px;
+      // siz
+    }
+  }
+}
