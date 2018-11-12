@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage} from '../tabs/tabs'; //MM add
+import { AngularFireAuth} from  "angularfire2/auth";
+import { User } from '../../models/user';
 /**
  * Generated class for the SignupPage page.
  *
@@ -14,16 +16,29 @@ import { TabsPage} from '../tabs/tabs'; //MM add
   templateUrl: 'signup.html',
 })
 export class SignupPage {
+  user= {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor( private angufireAuth:AngularFireAuth ,public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  /*ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
-  }
+  }*/
   //MM add
-  signupPage() {
-    // verfication et inscription
-    this.navCtrl.push(TabsPage, {}, { animate: true });
+  async signup(user) {
+     
+      //console.log('ionViewDidLoad LoginPage');
+    try {
+      const result= await this.angufireAuth.auth.createUserAndRetrieveDataWithEmailAndPassword(user.email, user.password);
+      console.log(result);
+      if (result){
+        this.navCtrl.push(TabsPage, {}, { animate: true });
+      }
+    } catch(e){
+       console.error(e);
+    }
   }
+    // verfication et inscription
+    //this.navCtrl.push(TabsPage, {}, { animate: true });
+  
 }

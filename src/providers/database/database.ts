@@ -102,4 +102,14 @@ export class DatabaseProvider {
       return [];
     });
   }
+  addFavDuaa(idDuaa) {
+    let data = [idDuaa]
+    console.log(JSON.stringify(data));
+    return this.database.executeSql("INSERT INTO favoritesduaa (idDuaa) VALUES(?);", data).then(data => {
+      return data;
+    }, err => {
+      console.log('Error: ', err);
+      return err;
+    });
+  }
 }

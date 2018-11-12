@@ -16,7 +16,7 @@
 <ion-content padding dir="rtl">
 
       
-  <ion-slides #pageSlider (ionSlideDidChange)="onSlideMoved()" dir="rtl">
+  <ion-slides #pageSlider (ionSlideDidChange)="onSlideMoved()" pager="true" dir="rtl">
     
     <ion-slide *ngFor="let post of posts">
           <p [innerHTML]="post.excerpt.rendered"></p>

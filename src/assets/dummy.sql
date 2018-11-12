@@ -4,3 +4,4 @@ INSERT INTO todocategories (idCategorie,nomCategorie) VALUES(1,'Administratif');
 INSERT INTO todocategories (idCategorie,nomCategorie) VALUES(2,'Agence');
 INSERT INTO todocategories (idCategorie,nomCategorie) VALUES(3,'Préparatif');
 INSERT INTO todocategories (idCategorie,nomCategorie) VALUES(4,'Achats');
+CREATE TABLE IF NOT EXISTS favoritesduaa ( `idDuaa` INTEGER NOT NULL UNIQUE );

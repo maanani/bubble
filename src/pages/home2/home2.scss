@@ -11,45 +11,65 @@ page-home2 {
     width: 100px ;
     height: 150px;
     display: inline-block;
+    margin-block-end: 0;
+    padding-block-end:0;
+    margin-bottom: 0;
+}
+
+.text-on-bottom > .button-inner {
+  flex-direction: column;
 }
 .action-col{
-  width:50%;
+  width:80%;
   margin-left: auto;
   margin-right: auto;
-  
+  margin-bottom: 0;
+  margin-block-end: 0;
+  padding-block-end:0;
  // height: 80px;
  
 }
 .action-row{
- margin-bottom: 3400px;
+ margin-bottom: 0;
+ margin-block-end: 0;
+ padding-block-end:0;
 }
-.col{width:50%;
+.col{
+  width:50%;
+  margin-bottom: 0;
 }
 .card{
   background: color($colors, favorite);
   
-    //position: relative;
- // text-align: center;
+ position: relative;
+ text-align: center;
  // widows: 300px;
-  margin: auto ;
+  //margin: auto ;
   border-radius: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px
+  margin-bottom: 0;
+  margin-left: 5px;
+  margin-block-end: 0;
+  padding-block-end:0;
   //	box-shadow: none;
   
 }
-
+.div{
+  margin-block-end: 0;
+  padding-block-end:0;
+  margin-bottom: 0;
+}
 .item{
-  background: color($colors, favorite);
+  background: color($colors, "gris");
   border-top: none;
   border-bottom:none;
   margin-top: -3px;
-  margin-bottom: -8px;
+  margin-block-end: 100px;
+  margin-bottom: 0;
 //   display: inline-block;
 //   //margin:auto;
-//  font-size: 0 ;
+font-size: 8px;
 //   //white-space:wrap;
-//  // height:15px;
+height:25px;
 }
 p {
    /* à modifier selon vos besoins */

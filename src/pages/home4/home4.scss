@@ -1,0 +1,61 @@
+page-home4 {
+    overflow: scroll;
+       .wide-as-needed {
+         overflow: scroll;
+         white-space: nowrap;
+       }
+       // .scroll { 
+       //   min-width: 100%;
+       // }
+     
+       ion-card {
+         width: 200px ;
+         height: 130px;
+        display: inline-block;
+     }
+     .text-on-bottom > .button-inner {
+       flex-direction: column;
+     }
+     .newcard{
+       background: color($colors, vimeo);
+       margin: auto ;
+       border-radius: 10px;
+       margin-bottom: 10px;
+       margin-left: 10px
+     }
+       .oldcard{
+         background: color($colors, favorite);
+       
+         //position: relative;
+      // text-align: center;
+       //widows: 300px;
+       margin: auto ;
+       border-radius: 10px;
+       margin-bottom: 10px;
+       margin-left: 10px
+       //	box-shadow: none;
+       
+     }
+     .action{
+   
+       margin-left: auto;
+       margin-right: auto;
+     
+      // height: 80px;
+      
+     }
+     .item{
+       font-size: 10px ;
+       white-space:wrap;
+       height:10px;
+     }
+     p {
+       //width: 200px; /* à modifier selon vos besoins */
+       overflow: hidden;
+       text-overflow: ellipsis; 
+     }
+    
+   
+    
+   }
+   

@@ -41,7 +41,12 @@ export class ContentPage {
       console.log(`This is the last ${this.lastSlide} slide of ${this.numSlides} slides`);
     }
   }
- 
+  moveNext(){
+    this.viewer.slideNext();
+  }
+  startQuiz(){
+    
+  }
   ionViewDidLoad() {
     
     console.log('ionViewDidLoad ContentPage');

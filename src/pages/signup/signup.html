@@ -22,19 +22,19 @@
     </ion-item>
     <ion-item>
       <ion-label fixed>email</ion-label>
-      <ion-input type="text" value=""></ion-input>
+      <ion-input type="text" value="" [(ngModel)]= "user.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label fixed>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]= "user.password"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label fixed>Confim Password</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-    <button ion-button block class="marginTop" (click)="signupPage()">signup</button>
+    <button ion-button block class="marginTop" (click)="signup(user)">signup</button>
 
   </ion-list>
 

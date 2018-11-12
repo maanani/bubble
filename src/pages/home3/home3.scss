@@ -13,9 +13,25 @@ page-home3 {
       height: auto;
       //display: inline-block;
   }
-   
-  .card{
-    background: color($colors, favorite);
+  .text-on-bottom > .button-inner {
+    flex-direction: column;
+  }
+  .newcard{
+    background: color($colors, vimeo);
+    margin: auto ;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px
+  }
+  .donecard{
+    background: color($colors, done);
+    margin: auto ;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px
+  }
+    .oldcard{
+      background: color($colors, favorite);
     
       //position: relative;
    // text-align: center;
@@ -36,6 +52,7 @@ page-home3 {
    
   }
   .item{
+   // background: color($colors, light);
     font-size: 10px ;
     white-space:wrap;
     height:20px;

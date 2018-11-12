@@ -21,11 +21,16 @@ import { Home3Page } from '../pages/home3/home3';
 import { ContentPage } from '../pages/content/content';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TabtestPage } from '../pages/test/tabtest';
+import { DuaaPage } from '../pages/duaa/duaa';
+import { DuaalistPage } from '../pages/duaalist/duaalist';
 
 import { HttpModule } from '@angular/http'; //OK
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LoginProvider } from '../providers/login/login';
+//import { LoginProvider } from '../providers/login/login';
+// MM import Firebase
+import { AngularFireModule } from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
 
 //MM importation module SQLITE 
 import { SQLite } from '@ionic-native/sqlite';
@@ -36,6 +41,10 @@ import { TodolistProvider } from '../providers/todolist/todolist';
 import { DatabaseProvider } from '../providers/database/database';
 import { WpProvider } from '../providers/wp/wp';
 import { AgencesDataProvider } from '../providers/agences-data/agences-data';
+import { FIREBASE_CONFIG } from './app.firebase.config';
+import { Home4Page } from '../pages/home4/home4';
+import { QuizPage } from '../pages/quiz/quiz';
+import { QuizProvider } from '../providers/quiz/quiz';
 
 @NgModule({
   declarations: [
@@ -52,16 +61,22 @@ import { AgencesDataProvider } from '../providers/agences-data/agences-data';
     HomePage,
     Home2Page,
     Home3Page,
+    Home4Page,
     AgencesPage,
     ContentPage,
+    QuizPage,
     TabtestPage,
+    DuaaPage,
+    DuaalistPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG.config),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -78,9 +93,13 @@ import { AgencesDataProvider } from '../providers/agences-data/agences-data';
     HomePage,
     Home2Page,
     Home3Page,
+    Home4Page,
     ContentPage,
+    QuizPage,
     AgencesPage,
     TabtestPage,
+    DuaaPage,
+    DuaalistPage,
     TabsPage
   ],
   providers: [
@@ -88,14 +107,15 @@ import { AgencesDataProvider } from '../providers/agences-data/agences-data';
     HttpModule,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoginProvider,
+    //LoginProvider,
     SQLitePorter,
     SQLite,
     Toast,
     TodolistProvider,
     DatabaseProvider,
     WpProvider,
-    AgencesDataProvider
+    AgencesDataProvider,
+    QuizProvider
   ]
 })
 export class AppModule {}

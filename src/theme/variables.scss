@@ -34,11 +34,11 @@ $headings-font-weight: 300;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$colors: ( primary: #f23b1c, secondary: #127826, danger: #f53d3d, light: #f4f4f4, dark: #222, favorite: #ffd64d, twitter: #1da1f4, google: #dc4a38, vimeo: #23b6ea, facebook: #3b5998,  gris: #f2f3f4);
+$colors: ( primary: #f23b1c, secondary: #127826, danger: #f53d3d, light: #f4f4f4, dark: #222, favorite: #ffd64d, twitter: #1da1f4, google: #dc4a38, vimeo: #3399FF, facebook: #3b5998,  gris: #ebe8e8, done:#33a149); //vimeo: #23b6ea
 
 //MM-add
 //$toolbar-background: color ($colors, secondary);
-$colors2: (test: #46f86a);
+$colors2: (test: #47bb38);
 
 // App iOS Variables
 // --------------------------------------------------
@@ -52,9 +52,9 @@ $colors2: (test: #46f86a);
 
 // Use the primary color as the background for the toolbar-md-background
 
-$toolbar-background: color($colors, secondary); //MM change color nav top
+$toolbar-background: color($colors, done); //MM change color nav top
 //$tabs-md-background: color($colors, primary);
-$tabs-tab-color-active: color($colors, secondary);
+$tabs-tab-color-active: color($colors, done);
 //$toolbar-background: color($colors, secondary);
 // Change the color of the segment button text
 $toolbar-active-color: #fff;

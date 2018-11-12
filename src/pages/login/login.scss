@@ -6,10 +6,12 @@ page-login {
   text-align: center;
 }
 .logincard{
-  background:  #46f86a;
+  background: color($colors, light);
+ // background:  #3399FF;
   border-radius: 15px;
 }
 .item{
-  background: #46f86a;
+ background: color($colors, light);
+  //background: #3399FF;
 }
 }
