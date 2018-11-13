@@ -15,6 +15,17 @@
 
 <ion-content padding>
 
-  OK
+    <ion-list radio-group >
+        {{quiz.question}}
+        <ion-item>
+          <ion-label>{{quiz.id}}</ion-label>
+          <ion-radio value="rep1"> </ion-radio>
+        </ion-item>
+        <ion-item *ngFor="let response of quiz.responses" >  
+          <ion-label>{{response.answer}}</ion-label>
+          <ion-radio [value]="response.answer"></ion-radio>
+        </ion-item>
+        <button ion-button block class="marginTop" (click)="verify(response)">check response</button>
+      </ion-list>
 
 </ion-content>

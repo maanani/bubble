@@ -4,6 +4,10 @@ export interface Quiz {
         idContent: number;
         type: number;
         question: string;
-        responses: any[];
+        responses: [ 
+            {
+            answer: string;
+            iscorrect: boolean;
+        }];
           
 }
