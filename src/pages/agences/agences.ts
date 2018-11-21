@@ -65,8 +65,8 @@ export class AgencesPage {
   }
   presentConfirm(agence) {
     let alert = this.alertCtrl.create({
-      title: 'contacter agence ' + agence.nom,
-      message: 'voules vous contacter cette agence au :' + agence.telephone + '?',
+      title: agence.nom+' ('+agence.ville+')',
+      message: 'voulez-vous contacter cette agence au :' + agence.telephone + '?',
       buttons: [
         {
           text: 'Cancel',
