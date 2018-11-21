@@ -47,50 +47,56 @@ export class DatabaseProvider {
       });
   }
 
-  addCategories(id, newcategorie) {
+  async addCategories(id, newcategorie) {
     let data = [id, newcategorie]
-    return this.database.executeSql("INSERT INTO todocategories (idCategorie,nomCategorie) VALUES(?,?);", data).then(data => {
-      return data;
-    }, err => {
+    try {
+      const data_1 = await this.database.executeSql("INSERT INTO todocategories (idCategorie,nomCategorie) VALUES(?,?);", data);
+      return data_1;
+    }
+    catch (err) {
       console.log('Error: ', err);
       return err;
-    });
+    }
   }
 
-  getAllCategories() {
-    return this.database.executeSql("SELECT * FROM todocategories", []).then((data) => {
+  async getAllCategories() {
+    try {
+      const data = await this.database.executeSql("SELECT * FROM todocategories", []);
       let categories = [];
       if (data.rows.length > 0) {
         for (var i = 0; i < data.rows.length; i++) {
-          categories.push({ categorieId: data.rows.item(i).idCategorie, nomcategorie: data.rows.item(i).nomCategorie });
+          categories.push({ idCategorie: data.rows.item(i).idCategorie, nomCategorie: data.rows.item(i).nomCategorie });
         }
       }
       return categories;
-    }, err => {
+    }
+    catch (err) {
       console.log('Error: ', err);
       return [];
-    });
+    }
   }
 
   getDatabaseState() {
     return this.databaseReady.asObservable();
   }
-  addTask(item, desciprition) {
-    let data = [item, desciprition,2]
-    console.log(JSON.stringify(data));
-    return this.database.executeSql("INSERT INTO todolistes (title,description,categorieId) VALUES(?,?,?);", data).then(data => {
-      return data;
-    }, err => {
+  async addTask(task) {
+
+    console.log(JSON.stringify(task));
+    try {
+      const data_1 = await this.database.executeSql("INSERT INTO todolistes (title,description,categorieId) VALUES(?,?,?);", task);
+      return data_1;
+    }
+    catch (err) {
       console.log('Error: ', err);
       return err;
-    });
+    }
   }
   getAlltask() {
     return this.database.executeSql("SELECT * FROM todolistes", []).then((data) => {
       let tache = [];
       if (data.rows.length > 0) {
         for (var i = 0; i < data.rows.length; i++) {
-          tache.push({title : data.rows.item(i).title, description: data.rows.item(i).description, categorieId:data.rows.item(i).categorieId });
+          tache.push({id:data.rows.item(i).idTodo, title : data.rows.item(i).title, description: data.rows.item(i).description, categorieId:data.rows.item(i).categorieId ,isDone:data.rows.item(i).isDone});
         }
         console.log("getalltask",JSON.stringify(tache));
       }
@@ -102,6 +108,11 @@ export class DatabaseProvider {
       return [];
     });
   }
+
+  updateisDone(task){
+  console.log(" item to update "+task.id+"and is" +task.isDone);
+    return this.database.executeSql("UPDATE todolistes set isDone=? WHERE idTodo==?", [task.isDone,task.id]).then(data=>{ return data});
+  }
   addFavDuaa(idDuaa) {
     let data = [idDuaa]
     console.log(JSON.stringify(data));
@@ -111,5 +122,18 @@ export class DatabaseProvider {
       console.log('Error: ', err);
       return err;
     });
+  
   }
+  async addAgences(agences) {
+
+      /* console.log(JSON.stringify(task));
+       try {
+         const data_1 = await this.database.executeSql("INSERT INTO todolistes (title,description,categorieId) VALUES(?,?,?);", task);
+         return data_1;
+       }
+       catch (err) {
+         console.log('Error: ', err);
+         return err;
+         */
+       }
 }

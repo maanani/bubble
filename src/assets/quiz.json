@@ -1,22 +1,23 @@
 [{
       "id": 1,
-      "idContent": 1,
+      "idContent": 635659554,
       "type": 1,
-      "question": "this is the question ?",
+      "question": "this is the question 1 ?",
       "responses": [
        {
-          "answer": "tests 1 answer",
+          "id": "rep1",
+        "answer": "tests 1 answer",
           "iscorrect": true
         },
-        {
+        { "id": "rep2",
           "answer": "tests 2 answer",
           "iscorrect": false
         },
-       {
+       { "id": "rep3",
           "answer": "tests 3 answer",
           "iscorrect": true
         },
-        {
+        { "id": "rep4",
           "answer": "tests 4 answer",
           "iscorrect": false
         }
@@ -26,21 +27,25 @@
       "id": 2,
       "idContent": 2,
       "type": 0,
-      "question": "this is the question ?",
+      "question": "this is the question 2?",
       "responses": [
         {
-           "answer": "tests 1 answer",
+          "id": "rep1", 
+          "answer": "tests 1 answer",
            "iscorrect": true
          },
          {
+          "id": "rep2",
            "answer": "tests 2 answer",
            "iscorrect": false
          },
         {
+          "id": "rep3",
            "answer": "tests 3 answer",
            "iscorrect": true
          },
          {
+          "id": "rep4",
            "answer": "tests 4 answer",
            "iscorrect": false
          }

@@ -1,0 +1,34 @@
+[
+  {
+    "nom": "ILS voyage",
+    "telephone": "0522102030",
+    "adresse": "coordonéé google",
+    "ville": "casablanca",
+    "fb": "casablanca",
+    "site": "http://www.ils.ma"
+  },
+  {
+    "nom": " Atlas voyage",
+    "telephone": "0522405060",
+    "adresse": "coordonéé google",
+    "ville": "casablanca",
+    "fb": "casablanca",
+    "site": "http://www.atlasvoyage.ma"
+  },
+  {
+    "nom": "Al Awail",
+    "telephone": "0537102030",
+    "adresse": "coordonéé google",
+    "ville": "Rabat",
+    "fb": "Rabat",
+    "site": "http://www.alawail.ma"
+  },
+  {
+    "nom": " Favorie voyage",
+    "telephone": "0537102030",
+    "adresse": "coordonéé google",
+    "ville": "Rabat",
+    "fb": "Rabat",
+    "site": "http://www.favorievoyage.ma"
+  }
+]

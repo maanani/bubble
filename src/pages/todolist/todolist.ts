@@ -87,24 +87,18 @@ export class TodolistPage {
   
   
   // tache selecionné
-  checkItem(id) {
+  checkItem(item) {
 
-    this.tasks.map((task) => {
-      if (task.Id == id) {
-        if (task.IsDone) {
-          task.IsDone = false;
-        }
-        else {
-          task.IsDone = true;
-        }
-      }
-    })
-
-
-    this.updateTask()
+    console.log( "valeur de "+item.isDone)
+    return  this.databaseprovider.updateisDone(item);
+    // this.tasks.find((res) => {
+    //   return (res.id === item.id)
+    // });
+    // this.updateTask(item)
   }
   
   presentAddModal() {
+    
     let addModal = this.modalCtrl.create(AjoutertaskPage);
     //refresh après ajout
     addModal.onDidDismiss(() => {
@@ -113,43 +107,14 @@ export class TodolistPage {
     addModal.present();
   }
   
-  checkPendingItem(id) {
-
-    this.pendingTasks.map((task) => {
-      if (task.Id == id) {
-        if (task.IsDone) {
-          task.IsDone = false;
-        }
-        else {
-          task.IsDone = true;
-        }
-      }
-    })
 
 
-    this.updateTask()
-
-  }
-  checkDoneItem(id) {
-
-    this.doneTasks.map((task) => {
-      if (task.Id == id) {
-        if (task.IsDone) {
-          task.IsDone = false;
-        }
-        else {
-          task.IsDone = true;
-        }
-      }
-    })
-
-
-    this.updateTask()
-
-  }
-
-  updateTask() {
-
+  updateTask(item) {
+    // this.tasks.find((res) => {
+    //   return (res.id === item.id)
+     
+    // });
+    return  this.databaseprovider.updateisDone(item);
   }
 
 }

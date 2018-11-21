@@ -17,7 +17,7 @@ c pages and navigation.
         <ion-spinner></ion-spinner>
     </div>
     <ion-list>
-        <ion-item *ngFor="let agence of agences" (click)="showDetails(agence.id)">
+        <ion-item *ngFor="let agence of result" (click)="showDetails(agence.nom)">
             {{agence.nom}}
         </ion-item>
     </ion-list>

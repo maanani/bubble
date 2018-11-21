@@ -8,32 +8,35 @@
 
 
 <ion-header>
-    <ion-navbar>
-      <ion-title text-center>Ionic Task Manager</ion-title>
-    </ion-navbar>
-   
-  </ion-header>
-  
-  <ion-content padding>
-     <ion-fab top right>
-     <button ion-fab mini (click)="dismiss()"> <ion-icon name="close-circle"></ion-icon></button>
-   </ion-fab>
-   
-    <ion-list>
-  
-  
+  <ion-navbar>
+    <ion-title text-center>Ionic Task Manager</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-fab top right>
+    <button ion-fab mini (click)="dismiss()">
+      <ion-icon name="close-circle"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-list>
     <ion-item>
-     
-        <ion-label floating>Tache</ion-label>
-        <ion-input name="task" [(ngModel)]="item"></ion-input>
-      </ion-item>
-      <ion-item>
-             <ion-label floating>Description</ion-label>
-        <ion-input name="desc" [(ngModel)]="description"></ion-input>
+      <ion-label floating>Tache</ion-label>
+      <ion-input name="task" [(ngModel)]="item"></ion-input>
     </ion-item>
-  
-    
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-input name="desc" [(ngModel)]="description"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>categorie</ion-label>
+        <ion-select>
+          <ion-option *ngFor="let categorie of categories" [value]="categorie.idCategorie" (ionSelect)="select(categorie.idCategorie)">{{categorie.nomCategorie}}</ion-option>
+        </ion-select>
+      </ion-item>
+
   </ion-list>
-  
+
   <button ion-button round (click)="add()">Add</button>
-  

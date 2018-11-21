@@ -1,0 +1,37 @@
+<!--
+  Generated template for the QuizPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Quiz Result</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding dir="rtl">
+  
+      <ion-list *ngIf="quiz.type===0" radio-group>
+          {{quiz.question}}
+  
+          <ion-item *ngFor="let resp of quiz.responses" >  
+            <ion-label [color]="answeredCorrect? 'secondary' : 'primary'">{{resp.answer}}</ion-label>
+            <ion-radio (click)="select(resp)" [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" [color]="answeredCorrect? 'secondary' : 'primary'"></ion-radio>
+          </ion-item>
+          <button ion-button block class="marginTop" (click)="nextCourse()">check response</button>
+        </ion-list>
+        <ion-list *ngIf="quiz.type===1">
+            {{quiz.question}}
+           
+            <ion-item *ngFor="let resp of quiz.responses" >  
+                <ion-label [color]="answeredCorrect? 'secondary' : 'primary'">{{resp.answer}}</ion-label>
+              <ion-checkbox  [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" [color]="answeredCorrect? 'secondary' : 'primary'"></ion-checkbox>
+            </ion-item>
+            <button ion-button block class="marginTop" (click)="nextCourse()"> compris</button>
+          </ion-list>
+  </ion-content>
+  

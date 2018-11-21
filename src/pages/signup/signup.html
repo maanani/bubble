@@ -14,28 +14,42 @@
 
 
 <ion-content padding>
-  <ion-list>
 
-    <ion-item>
-      <ion-label fixed>Username</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label fixed>email</ion-label>
-      <ion-input type="text" value="" [(ngModel)]= "user.email"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label fixed>Password</ion-label>
-      <ion-input type="password" [(ngModel)]= "user.password"></ion-input>
-    </ion-item>
+    <h1>Bienvenu sur nosok</h1>
+  <ion-card class="signupcard">
+    <ion-card-header>Créez votre compte</ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="signupForm">
+        <ion-list no-lines>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" value="" [formControl]="signupForm.controls['email']"></ion-input>
+          </ion-item>
+          <div *ngIf="!signupForm.controls.email.valid && signupForm.controls.email.dirty" class="validator-error">
+            Email
+            est incorrect.</div>
+          <ion-item>
+            <ion-label floating>Password</ion-label>
 
-    <ion-item>
-      <ion-label fixed>Confim Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <button ion-button block class="marginTop" (click)="signup(user)">signup</button>
+            <ion-input value="" [formControl]="signupForm.controls['password']" type="password"></ion-input>
+            <div *ngIf="!signupForm.controls.password.valid" class="validator-error">
+              Email est incorrect.</div>
+          </ion-item>
+          <ion-item>
+            <ion-label fixed>Confim Password</ion-label>
+            <ion-input [formControl]="signupForm.controls['confirmpassword']" type="password"></ion-input>
+            <div *ngIf="!signupForm.controls.confirmpassword.valid" class="validator-error"></div>
+          </ion-item>
+          <ion-item>
 
-  </ion-list>
+            <button ion-button block class="marginTop" [disabled]="!signupForm.valid" (click)="signup()" color="done">signup</button>
+          </ion-item>
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
 
 </ion-content>

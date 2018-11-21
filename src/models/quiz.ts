@@ -6,6 +6,7 @@ export interface Quiz {
         question: string;
         responses: [ 
             {
+            id: string;
             answer: string;
             iscorrect: boolean;
         }];

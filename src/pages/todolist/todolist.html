@@ -24,12 +24,13 @@
 <ion-content dir="rtl">
 
     <ion-list *ngFor="let cat of categories "> 
-            <ion-item-divider  color="light">{{cat.nomcategorie}}</ion-item-divider>
+            <ion-item-divider  color="light">{{cat.nomCategorie}}</ion-item-divider>
             <ng-container *ngFor="let item of tasks">
             <ion-item-sliding text-wrap >
-                <ion-item *ngIf="item.categorieId===cat.categorieId ">
-                    <ion-label >{{item.title}} {{item.categorieId}} {{cat.categorieId}}</ion-label> 
-                    <ion-checkbox name="chk" (click)="checkItem(item.id)" [checked]=flase item-right>
+                <ion-item *ngIf="item.categorieId===cat.idCategorie ">
+                    <ion-label >{{item.title}} {{item.categorieId}} </ion-label> 
+                    <ion-checkbox name="chk" (click)="checkItem(item)" [(ngModel)]="item.isDone" [checked]="item.isDone" item-right>
+               
                      </ion-checkbox>   
                     </ion-item>
                      <ion-item-options side="right">
@@ -43,8 +44,7 @@
             </ion-item-sliding>
         </ng-container>
     </ion-list>
-    <ion-fab bottom left>
-
+    <ion-fab bottom right>
             <button ion-fab mini (click)="presentAddModal()">
                 <ion-icon name="add"></ion-icon>
             </button>

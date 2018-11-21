@@ -19,22 +19,29 @@
     <ion-card-header>Connecter-vous</ion-card-header>
   <ion-card-content>
        <ion-list no-lines >
+          <form [formGroup]="loginForm">
+
            <ion-item>
             <ion-label floating>Email</ion-label>
-          <ion-input type="text" value="" [(ngModel)]= "user.email"></ion-input>
+          <ion-input type="text" value=""  [formControl]="loginForm.controls['email']" ></ion-input>
           </ion-item>
-
+          <div *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty" class="validator-error"> Email est incorrect.</div>
           <ion-item>
              <ion-label floating>Password</ion-label>
-              <ion-input type="password" [(ngModel)]= "user.password"></ion-input>
-          </ion-item>
+           
+             <ion-input  value="" [formControl]="loginForm.controls['password']" type="password"></ion-input>     
+             <div *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty" class="validator-error"> Email est incorrect.</div>
+         
+           
+            </ion-item>
           <ion-item>
-              <p>Mot de pass oublié? <a>Récupérez ici</a></p>
+              <p>Mot de pass oublié? <a><button ion-button block clear (click)="resetPwd()">Récupérez ici</button></a></p>
            </ion-item>
-          <button ion-button block class="marginTop" (click)="login(user)">login</button>
+          <button ion-button block class="marginTop" [disabled]="!loginForm.valid" (click)="login()" color="done">login</button>
+        </form>
         </ion-list>
         <b>OU</b>
-        <button ion-button block color="facebook" (click)="loginwithfc(user)"> <ion-icon name="logo-face"></ion-icon><div>Compte Facebook</div></button>
+        <button ion-button block color="facebook" (click)="loginwithfc()"> <ion-icon name="logo-face"></ion-icon><div>Compte Facebook</div></button>
  </ion-card-content>
 </ion-card>
 </ion-content>

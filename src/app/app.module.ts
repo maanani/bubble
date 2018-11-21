@@ -45,6 +45,11 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 import { Home4Page } from '../pages/home4/home4';
 import { QuizPage } from '../pages/quiz/quiz';
 import { QuizProvider } from '../providers/quiz/quiz';
+import { ResultPage } from '../pages/result/result';
+import { CallNumber } from '@ionic-native/call-number';
+import {Network} from '@ionic-native/network'
+import { ResetpwdPage } from '../pages/resetpwd/resetpwd';
+import { NetworkserviceProvider } from '../providers/networkservice/networkservice';
 
 @NgModule({
   declarations: [
@@ -54,6 +59,7 @@ import { QuizProvider } from '../providers/quiz/quiz';
     TodolistPage,
     AjoutertaskPage,
     SignupPage,
+    ResetpwdPage,
     LogoutPage,
     AboutPage,
     EditListPage,
@@ -65,6 +71,7 @@ import { QuizProvider } from '../providers/quiz/quiz';
     AgencesPage,
     ContentPage,
     QuizPage,
+    ResultPage,
     TabtestPage,
     DuaaPage,
     DuaalistPage,
@@ -84,6 +91,7 @@ import { QuizProvider } from '../providers/quiz/quiz';
     WelcomePage,
     LoginPage,
     SignupPage,
+    ResetpwdPage,
     LogoutPage,
     TodolistPage,
     AjoutertaskPage,
@@ -96,6 +104,7 @@ import { QuizProvider } from '../providers/quiz/quiz';
     Home4Page,
     ContentPage,
     QuizPage,
+    ResultPage,
     AgencesPage,
     TabtestPage,
     DuaaPage,
@@ -115,7 +124,10 @@ import { QuizProvider } from '../providers/quiz/quiz';
     DatabaseProvider,
     WpProvider,
     AgencesDataProvider,
-    QuizProvider
+    QuizProvider,
+    CallNumber,
+    Network,
+    NetworkserviceProvider
   ]
 })
 export class AppModule {}

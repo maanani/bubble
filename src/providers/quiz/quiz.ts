@@ -24,57 +24,7 @@ export class QuizProvider {
 
   }
   getallQuiz() {
-
-    const QUIZ_DATA = [
-      {
-        "id": 1,
-        "idContent": 1,
-        "type": 1,
-        "question": "this is the question ?",
-        "responses": {
-          "Rep1": {
-            "answer": "tests 1 answer",
-            "iscorrect": true
-          },
-          "Rep2": {
-            "answer": "tests 3 answer",
-            "iscorrect": false
-          },
-          "Rep3": {
-            "answer": "tests 3 answer",
-            "iscorrect": true
-          },
-          "Rep4": {
-            "answer": "tests 4 answer",
-            "iscorrect": false
-          }
-        }
-      },
-      {
-        "id": 2,
-        "idContent": 2,
-        "type": 0,
-        "question": "this is the question ?",
-        "responses": {
-          "Rep1": {
-            "answer": "tests 1 answer",
-            "iscorrect": true
-          },
-          "Rep2": {
-            "answer": "tests 3 answer",
-            "iscorrect": false
-          },
-          "Rep3": {
-            "answer": "tests 3 answer",
-            "iscorrect": false
-          },
-          "Rep4": {
-            "answer": "tests 4 answer",
-            "iscorrect": false
-          }
-        }
-      }
-    ];
+;
     //use page=1 si on veut limiter au 10 récent ...mais c'est pas d actualité
 
     //if we want to query posts by category

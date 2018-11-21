@@ -9,26 +9,41 @@ import 'rxjs/add/operator/map';
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
+export const AGENCES_URL='assets/agences.json';
 @Injectable()
 export class AgencesDataProvider {
 
-  agences: { id: string; nom: string; Adresse: string; Tel: string; email: string; }[];
+  public agences: any;
   constructor(public http: Http) {
-    console.log('Hello AgencesDataProvider Provider');
-    this.agences = [
-      { id: '1', nom: 'one', Adresse: 'one adress', Tel: '111111111111', email: 'pne@one.com' },
-      { id: '2', nom: 'two', Adresse: 'one adress', Tel: '22222222222222', email: 'two@one.com' },
-      { id: '3', nom: 'three', Adresse: 'one adress', Tel: '44444444433', email: 'tree@one.com' },
-      { id: '4', nom: 'four', Adresse: 'one adress', Tel: '44444444444', email: 'four@one.com' },
-      { id: '5', nom: 'five', Adresse: 'one adress', Tel: '555555555555', email: 'five@one.com' },
-      { id: '6', nom: 'six', Adresse: 'one adress', Tel: '666666666666', email: 'sixsix@one.com' }
-    ]
-  }
-  filterItems(searchTerm) {
+    console.log('Hello AgencesDataProvider Provider')
+   
+     }
+  getAgences(){
 
-    return this.agences.filter((agence) => {
-      return agence.nom.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
-    });
+    return this.http.get(
+      AGENCES_URL)
+      .map(res => res.json());
+      
+      
+   
+
+//to complete may be
+  }
+ filterItems(searchTerm) {
+       //console.log( JSON.stringify(res));
+       this.getAgences().subscribe(res => {
+          this.agences= res.filter((agence) => {
+            return agence.nom.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+          });
+          console.log (this.agences);
+         
+        });
+        
+        return this.agences;
+
+    // return this.agences.filter((agence) => {
+    //   return agence.nom.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+    // });
   }
   findAgence(id) {
     return this.agences.find((agence) => { return agence.id == id })

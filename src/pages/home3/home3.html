@@ -21,89 +21,24 @@
   <ion-list>
       <ion-card class="newcard" *ngFor="let course of courses">
       <ion-card-content>
-        <h2>اليوم 8 </h2>
+        <h2> {{course.name}} </h2>
       </ion-card-content>
       <ion-item> 
         <ion-row > 
           <ion-col class="action">
-            <button ion-button icon-left color="done" clear (click)="loadcontent(cource.id)">
-              <ion-icon name="ios-analytics"></ion-icon>
-              <div>اختبر معلوماتك</div> 
+            <button ion-button icon-left color="done" clear (click)="loadcontent(course)">
+                <ion-icon name="ios-book"></ion-icon>
+                <div>محتوى</div>   
             </button>
           </ion-col>
           <ion-col class="action">
-            <button ion-button icon-left color="done" clear (click)="loadquiz(cource.id)">
-              <ion-icon name="ios-book"></ion-icon>
-              <div>محتوى</div>
+            <button ion-button icon-left color="done" clear (click)="loadquiz(course)">
+                <ion-icon name="md-checkmark-circle-outline"></ion-icon>
+                <div>اختبر معلوماتك</div> 
             </button>
           </ion-col>
         </ion-row>
       </ion-item>
-    </ion-card>
-  
-    <ion-card class="newcard">
-        <ion-card-content>
-          <h2>اليوم 9 </h2>
-        </ion-card-content>
-        <ion-item>
-          <ion-row>
-            <ion-col class="action">
-              <button ion-button class="text-on-bottom" icon-left color="done"  clear>
-                <ion-icon name="ios-analytics"></ion-icon>
-                <div>اختبر </div>
-              </button>
-            </ion-col>
-            <ion-col class="action">
-              <button ion-button class="text-on-bottom" icon-left color="done" clear>
-                <ion-icon name="ios-book"></ion-icon>
-                <div>محتوى</div>
-              </button>
-            </ion-col>
-          </ion-row>
-        </ion-item>
-      </ion-card>
-      <ion-card class="newcard">
-          <ion-card-content>
-            <h2>اليوم 10 </h2>
-          </ion-card-content>
-          <ion-item>
-            <ion-row>
-              <ion-col class="action">
-                <button ion-button  color="done" icon-left  clear>
-                  <ion-icon name="md-checkmark-circle"></ion-icon>
-                  <div>اختبر معلوماتك</div>
-                </button>
-              </ion-col>
-              <ion-col class="action">
-                <button ion-button icon-left  color="done" clear>
-                  <ion-icon name="ios-book"></ion-icon>
-                  <div>محتوى</div>
-                </button>
-              </ion-col>
-            </ion-row>
-          </ion-item>
-        </ion-card>
-        <ion-card class="newcard">
-            <ion-card-content>
-              <h2>اليوم 11 </h2>
-            </ion-card-content>
-            <ion-item>
-              <ion-row>
-                <ion-col class="action">
-                  <button ion-button icon-left color="vimeo" clear>
-                    <ion-icon name="ios-analytics"></ion-icon>
-                    <div>اختبر معلوماتك</div>
-                  </button>
-                </ion-col>
-                <ion-col class="action">
-                  <button ion-button icon-left color="vimeo" clear>
-                    <ion-icon name="md-checkmark-circle"></ion-icon>
-                    <div>محتوى</div>
-                  </button>
-                </ion-col>
-              </ion-row>
-            </ion-item>
-          </ion-card>
-          
+    </ion-card>       
     </ion-list>
 </ion-content>

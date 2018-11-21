@@ -93,4 +93,6 @@
     <allow-navigation href="http://172.20.10.2:8100" sessionid="a0162c9e" />
     <engine name="android" spec="^7.1.1" />
     <engine name="ios" spec="4.5.5" />
+    <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
+    <plugin name="cordova-plugin-network-information" spec="2.0.1" />
 </widget>

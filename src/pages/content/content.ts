@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
+import { App,IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
 
 import { WpProvider } from '../../providers/wp/wp';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { QuizPage } from '../quiz/quiz';
 /**
  * Generated class for the ContentPage page.
  *
@@ -24,7 +25,13 @@ export class ContentPage {
   public numSlides:any;
   currIndex:any;
   @ViewChild('pageSlider') viewer: Slides;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public wpProvider:WpProvider, public loadingCtrl: LoadingController) {
+  content: any;
+  pageTitle: any;
+  constructor(public _app:App,public navCtrl: NavController, public navParams: NavParams,public wpProvider:WpProvider, public loadingCtrl: LoadingController) {
+    this.content=this.navParams.get('content');
+    
+    this.pageTitle=this.content.name;
+
   }
   onSlideMoved() {
       this.currIndex = this.viewer.getActiveIndex(),
@@ -45,16 +52,22 @@ export class ContentPage {
     this.viewer.slideNext();
   }
   startQuiz(){
-    
+    this.navCtrl.push(QuizPage,{idCourse:this.content.id});
   }
   ionViewDidLoad() {
     
-    console.log('ionViewDidLoad ContentPage');
+    console.log(document.title);
+
+  //  this._app.setTitle(this.content.name);
+    console.log('ionViewDidLoad content TILTLE'+this.content.name);
   }
   ionViewWillEnter() {
-    let idContent=this.navParams.get('idContent');
-    //this.morePagesAvailable = true;
+    //this._app.setTitle(this.content.name);
+    
 
+   //this.content=this.navParams.get('content');
+    //this.morePagesAvailable = true;
+    console.log('ionViewDidLoad ContentPage c ce que tu a envoyer! =>  '+this.content.name);
     //if we are browsing a category
     // this.categoryId = this.navParams.get('id');
     // this.categoryTitle = this.navParams.get('title');
@@ -63,7 +76,7 @@ export class ContentPage {
       let loading = this.loadingCtrl.create();
       loading.present();
 
-      this.wpProvider.getPosts(idContent)
+      this.wpProvider.getPosts(this.content.id)
       .subscribe(data => {
         for(let post of data){
           post.excerpt.rendered = post.excerpt.rendered.split('<a')[0] + "</p>";

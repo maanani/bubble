@@ -5,6 +5,7 @@ import { Http, Headers } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/forkJoin';
+import { storage } from 'firebase';
 /*
   Generated class for the WpProvider provider.
 
@@ -35,11 +36,11 @@ export class WpProvider {
       + category_url)
     .map(res => res.json());
   }
-  getCategories(categoryId:number){
+  getCategories(categoryId:string){
         
     //if we want to query a specifique category sinon ALL
-    let category_url = categoryId? ("categories/" + categoryId): "";
-   
+    let category_url = categoryId? ("categories/" + categoryId): "categories/";
+   console.log(' url est: '+category_url);
     return this.http.get(WORDPRESS_REST_API_URL + category_url)
     .map(res => res.json());
   }
