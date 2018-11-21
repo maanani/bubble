@@ -16,34 +16,32 @@
 <ion-content padding>
 
 
-    <h1>Bienvenu sur nosok</h1>
+    <h1>مناسك الحج والعمرة</h1>
   <ion-card class="signupcard">
-    <ion-card-header>Créez votre compte</ion-card-header>
+    <ion-card-header>إنشاء حسابك</ion-card-header>
     <ion-card-content>
       <form [formGroup]="signupForm">
         <ion-list no-lines>
           <ion-item>
-            <ion-label floating>Email</ion-label>
+            <ion-label floating>البريد الإلكتروني Email</ion-label>
             <ion-input type="text" value="" [formControl]="signupForm.controls['email']"></ion-input>
           </ion-item>
-          <div *ngIf="!signupForm.controls.email.valid && signupForm.controls.email.dirty" class="validator-error">
-            Email
-            est incorrect.</div>
+          
           <ion-item>
-            <ion-label floating>Password</ion-label>
+            <ion-label floating>كلمه المرور mot de passe</ion-label>
 
             <ion-input value="" [formControl]="signupForm.controls['password']" type="password"></ion-input>
             <div *ngIf="!signupForm.controls.password.valid" class="validator-error">
               Email est incorrect.</div>
           </ion-item>
           <ion-item>
-            <ion-label fixed>Confim Password</ion-label>
+            <ion-label fixed>تأكيد كلمة المرور Confimez le mot de passe</ion-label>
             <ion-input [formControl]="signupForm.controls['confirmpassword']" type="password"></ion-input>
             <div *ngIf="!signupForm.controls.confirmpassword.valid" class="validator-error"></div>
           </ion-item>
           <ion-item>
 
-            <button ion-button block class="marginTop" [disabled]="!signupForm.valid" (click)="signup()" color="done">signup</button>
+            <button ion-button block class="marginTop" [disabled]="!signupForm.valid" (click)="signup()" color="done">الاشتراك</button>
           </ion-item>
         </ion-list>
       </form>

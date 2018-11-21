@@ -11,7 +11,7 @@
                 <ion-icon name='menu'></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title>Home</ion-title>
+        <ion-title>اللائحة</ion-title>
 
         <ion-buttons end>
             <button ion-button icon-only (click)="openModal()">
@@ -28,7 +28,7 @@
             <ng-container *ngFor="let item of tasks">
             <ion-item-sliding text-wrap >
                 <ion-item *ngIf="item.categorieId===cat.idCategorie ">
-                    <ion-label >{{item.title}} {{item.categorieId}} </ion-label> 
+                    <ion-label >{{item.title}}  </ion-label> 
                     <ion-checkbox name="chk" (click)="checkItem(item)" [(ngModel)]="item.isDone" [checked]="item.isDone" item-right>
                
                      </ion-checkbox>   

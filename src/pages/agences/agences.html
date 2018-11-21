@@ -3,14 +3,14 @@ c pages and navigation.
 <ion-header>
 
   <ion-navbar>
-    <ion-title>agences</ion-title>
+    <ion-title>وكالات</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
  
-<ion-content>
+<ion-content dir="rtl">
  
     <ion-searchbar [(ngModel)]="searchTerm"  [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
     <div *ngIf="searching" class="spinner-container">

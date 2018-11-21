@@ -7,27 +7,27 @@
 <ion-header>
 
     <ion-navbar>
-      <ion-title>Reset Password</ion-title>
+      <ion-title>إعادة ضبط كلمة المرور</ion-title>
     </ion-navbar>
   
   </ion-header>
   
   
   <ion-content id="ResetpwdPage" >
-    <h1>Bienvenu sur nosok</h1>
+      <h1>مناسك الحج والعمرة</h1>
     <ion-card class ="logincard">
-      <ion-card-header >réinitialiser votre mot de pass</ion-card-header>
+      <ion-card-header>إعادة ضبط كلمة المرور</ion-card-header>
     <ion-card-content>
          <ion-list no-lines >
             <form [formGroup]="resetForm">
   
              <ion-item>
-              <ion-label floating>Email</ion-label>
+              <ion-label floating>البريد الإلكتروني Email</ion-label>
             <ion-input type="text" value=""  [formControl]="resetForm.controls['email']" ></ion-input>
             </ion-item>
            
               
-            <button ion-button block class="marginTop" [disabled]="!resetForm.valid" (click)="resetPassword()">Envoyer</button>
+            <button ion-button block class="marginTop" [disabled]="!resetForm.valid" (click)="resetPassword()">إرسال</button>
           </form>
           </ion-list>
           

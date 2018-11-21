@@ -7,7 +7,7 @@
 <ion-header>
 
     <ion-navbar>
-      <ion-title>Quiz Result</ion-title>
+      <ion-title>إجابة</ion-title>
     </ion-navbar>
   
   </ion-header>
@@ -22,7 +22,7 @@
             <ion-label [color]="answeredCorrect? 'secondary' : 'primary'">{{resp.answer}}</ion-label>
             <ion-radio (click)="select(resp)" [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" [color]="answeredCorrect? 'secondary' : 'primary'"></ion-radio>
           </ion-item>
-          <button ion-button block class="marginTop" (click)="nextCourse()">check response</button>
+          <button ion-button block class="marginTop" (click)="nextCourse()">فهمت</button>
         </ion-list>
         <ion-list *ngIf="quiz.type===1">
             {{quiz.question}}
@@ -31,7 +31,7 @@
                 <ion-label [color]="answeredCorrect? 'secondary' : 'primary'">{{resp.answer}}</ion-label>
               <ion-checkbox  [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" [color]="answeredCorrect? 'secondary' : 'primary'"></ion-checkbox>
             </ion-item>
-            <button ion-button block class="marginTop" (click)="nextCourse()"> compris</button>
+            <button ion-button block class="marginTop" (click)="nextCourse()"> فهمت</button>
           </ion-list>
   </ion-content>
   

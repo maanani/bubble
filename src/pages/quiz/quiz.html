@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>quiz</ion-title>
+    <ion-title>اختبر معلوماتك</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,7 +22,7 @@
           <ion-label [color]= "secondary">{{resp.answer}}</ion-label>
           <ion-radio (click)="select(resp)"></ion-radio>
         </ion-item>
-        <button ion-button block class="marginTop" (click)="verify()">check response</button>
+        <button ion-button block class="marginTop" (click)="verify()">تحقق من الجواب</button>
       </ion-list>
       <ion-list *ngIf="quiz.type===1">
           {{quiz.question}}
@@ -31,6 +31,6 @@
             <ion-label>{{resp.answer}}</ion-label>
             <ion-checkbox (ionChange)="addselect(resp)" [(ngModel)]= resp.checked></ion-checkbox>
           </ion-item>
-          <button ion-button block class="marginTop" (click)="verifyMulti()">check response</button>
+          <button ion-button block class="marginTop" (click)="verifyMulti()">تحقق من الجواب</button>
         </ion-list>
 </ion-content>

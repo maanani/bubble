@@ -7,37 +7,35 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>تسجيل الدخول</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content id="LoginPage" >
-  <h1>Bienvenu sur nosok</h1>
+  <h1>مناسك الحج والعمرة</h1>
   <ion-card class ="logincard">
-    <ion-card-header>Connecter-vous</ion-card-header>
+    <ion-card-header>دخول</ion-card-header>
   <ion-card-content>
        <ion-list no-lines >
           <form [formGroup]="loginForm">
 
            <ion-item>
-            <ion-label floating>Email</ion-label>
+            <ion-label floating>البريد الإلكتروني Email</ion-label>
           <ion-input type="text" value=""  [formControl]="loginForm.controls['email']" ></ion-input>
           </ion-item>
-          <div *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty" class="validator-error"> Email est incorrect.</div>
           <ion-item>
-             <ion-label floating>Password</ion-label>
+             <ion-label floating>كلمه المرور Password</ion-label>
            
              <ion-input  value="" [formControl]="loginForm.controls['password']" type="password"></ion-input>     
-             <div *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty" class="validator-error"> Email est incorrect.</div>
-         
+           
            
             </ion-item>
           <ion-item>
-              <p>Mot de pass oublié? <a><button ion-button block clear (click)="resetPwd()">Récupérez ici</button></a></p>
+              <p>نسيت كلمة المرور؟ Mot de pass oublié? <a><button ion-button block clear (click)="resetPwd()"> استرداد هنا Récupérez ici</button></a></p>
            </ion-item>
-          <button ion-button block class="marginTop" [disabled]="!loginForm.valid" (click)="login()" color="done">login</button>
+          <button ion-button block class="marginTop" [disabled]="!loginForm.valid" (click)="login()" color="done">دخول</button>
         </form>
         </ion-list>
         <b>OU</b>
