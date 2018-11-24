@@ -21,7 +21,7 @@
     </button>
   </ion-fab>
 
-  <ion-list>
+  <ion-list dir="rtl">
     <ion-item>
       <ion-label floating>اسم</ion-label>
       <ion-input name="task" [(ngModel)]="item"></ion-input>
@@ -30,10 +30,10 @@
       <ion-label floating>تفاصيل</ion-label>
       <ion-input name="desc" [(ngModel)]="description"></ion-input>
     </ion-item>
-    <ion-item>
-        <ion-label>تصنيف</ion-label>
-        <ion-select>
-          <ion-option *ngFor="let categorie of categories" [value]="categorie.idCategorie" (ionSelect)="select(categorie.idCategorie)">{{categorie.nomCategorie}}</ion-option>
+    <ion-item dir="rtl">
+        <ion-label dir="rtl">تصنيف</ion-label>
+        <ion-select dir="rtl">
+          <ion-option  right dir="rtl"  *ngFor="let categorie of categories" [value]="categorie.idCategorie" (ionSelect)="select(categorie.idCategorie)">{{categorie.nomCategorie}}</ion-option>
         </ion-select>
       </ion-item>
 

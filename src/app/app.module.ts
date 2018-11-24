@@ -50,6 +50,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import {Network} from '@ionic-native/network'
 import { ResetpwdPage } from '../pages/resetpwd/resetpwd';
 import { NetworkserviceProvider } from '../providers/networkservice/networkservice';
+import { SettingPage } from '../pages/setting/setting';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { NetworkserviceProvider } from '../providers/networkservice/networkservi
     TabtestPage,
     DuaaPage,
     DuaalistPage,
+    SettingPage,
     TabsPage
   ],
   imports: [
@@ -109,6 +111,7 @@ import { NetworkserviceProvider } from '../providers/networkservice/networkservi
     TabtestPage,
     DuaaPage,
     DuaalistPage,
+    SettingPage,
     TabsPage
   ],
   providers: [

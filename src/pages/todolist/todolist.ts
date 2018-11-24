@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 //import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { TodolistProvider } from '../../providers/todolist/todolist';
 import {DatabaseProvider} from'../../providers/database/database';
 //import {AddtaskPage} from '../add-task/add-task';
 import { AjoutertaskPage } from '../ajoutertask/ajoutertask';
 import { EditListPage } from './../edit-list/edit-list';
+import { SettingPage } from '../setting/setting';
 //import { AddTaskPage } from '../add-task/add-task';
 /**
  * Generated class for the TodolistPage page.
@@ -28,7 +29,7 @@ export class TodolistPage {
  public categories=[];
  public famille=[];
 
-  constructor(public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams,private databaseprovider: DatabaseProvider) {
+  constructor(public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams,private databaseprovider: DatabaseProvider, private alertCtrl:AlertController) {
     this.databaseprovider.getDatabaseState().subscribe(rdy => {
       if (rdy) {
         this.loadCategoriesData();
@@ -107,7 +108,42 @@ export class TodolistPage {
     addModal.present();
   }
   
+  deleteItem(slidingItem:any,id){
+    let alert = this.alertCtrl.create({
+      title: 'Supprimer la tache',
+      message: 'Etes vous sûr de voiloir supprimer?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            slidingItem.close();
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Confirmer',
+          handler: () => {
+            slidingItem.close();
+            this.databaseprovider.deleteTask(id).then((res)=>{
+              this.getalltaskData();
 
+           // this.navCtrl.pop();
+            });
+                   //console.log('call clicked' + agence.telephone);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+    
+  
+
+  editItem(slidingItem,id){
+  // aller sur page modification avec en param id ?
+  }
+  
 
   updateTask(item) {
     // this.tasks.find((res) => {
@@ -116,5 +152,7 @@ export class TodolistPage {
     // });
     return  this.databaseprovider.updateisDone(item);
   }
-
+  openModal(){
+    this.navCtrl.push(SettingPage,{});
+  }
 }

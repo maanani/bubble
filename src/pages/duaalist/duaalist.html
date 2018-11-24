@@ -7,16 +7,26 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>أدعية</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only>
+                <ion-icon name='menu'></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>أدعية</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="settings"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 
- 
-<ion-content dir="rtl"> 
- 
+
+
+<ion-content dir="rtl">
+
     <!-- <ion-searchbar [(ngModel)]="searchTerm"  [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
     <div *ngIf="searching" class="spinner-container">
         <ion-spinner></ion-spinner>
@@ -26,5 +36,5 @@
             <h1 [innerHTML]="duaa.title.rendered"> </h1>
         </ion-item>
     </ion-list>
- 
+
 </ion-content>

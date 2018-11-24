@@ -4,6 +4,7 @@ import { QuizProvider } from '../../providers/quiz/quiz';
 import { Quiz } from '../../models/quiz';
 import { ResultPage } from '../result/result';
 import { isTrueProperty } from 'ionic-angular/umd/util/util';
+import { SettingPage } from '../setting/setting';
 
 
 /**
@@ -110,5 +111,9 @@ export class QuizPage {
     } else { this.answeredCorrect = false; }
     this.navCtrl.push(ResultPage, { answeredCorrect: this.answeredCorrect, quiz: this.quiz });
 
+  }
+  openModal(){
+
+    this.navCtrl.push(SettingPage,{});
   }
 }

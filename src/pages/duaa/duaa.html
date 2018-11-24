@@ -4,15 +4,22 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
 <ion-header>
-  <ion-navbar>
-      <ion-buttons end>
-          <button ion-button icon-only (click)="openModal()">
-            <ion-icon name='menu'></ion-icon>
-          </button>
+
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only>
+                <ion-icon name='menu'></ion-icon>
+            </button>
         </ion-buttons>
-    <ion-title>دعاء</ion-title>
-  </ion-navbar>
+        <ion-title>دعاء</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="settings"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 <ion-content padding id="DuaaPage" background="favorite" dir="rtl" >
    

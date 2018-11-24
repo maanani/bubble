@@ -7,6 +7,7 @@ import { Slides } from 'ionic-angular';
 import { database } from 'firebase';
 import { DatabaseProvider } from '../../providers/database/database';
 import { withLatestFrom } from 'rxjs/operator/withLatestFrom';
+import { SettingPage } from '../setting/setting';
 
 /**
  * Generated class for the ContentPage page.
@@ -137,10 +138,9 @@ export class DuaaPage {
     console.log("the idSlide  is :"+ duaa.idSlide);
    this.viewer.slideTo(duaa.idSlide);
   }
-  addto(){
-      
-    
-
-    
+  addto(){  
+  }
+  openModal(){
+    this.navCtrl.push(SettingPage,{});
   }
 }

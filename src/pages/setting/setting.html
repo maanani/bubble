@@ -14,5 +14,90 @@
 
 
 <ion-content padding>
+  
+    <ion-list>
+      <ion-list-header>
+        Connexion
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-icon name="md-wifi" item-start color="green"></ion-icon>
+        <ion-label>Déconnexion</ion-label>
+        <button ion-button   (click)="logout()" outline color="black" item-end>
+            <ion-icon name="log-out"></ion-icon>
+          </button>>
+      </ion-item>
+    </ion-list>
+      <ion-list>
+          <ion-list-header>
+            Gestion des données
+          </ion-list-header>
+      <ion-item>
+          <ion-icon name="paw" item-start color="danger"></ion-icon>
+          <ion-label>Réinitialiser les quiz</ion-label>
+          <button ion-button outline  (clik)="clearQuiz()"item-end>effacer</button>
+        </ion-item>
 
-</ion-content>
+     <!--aussi effacer toutes les taches... -->
+    </ion-list>
+ <!--
+    <ion-list radio-group>
+      <ion-list-header>
+        Silence Phone
+      </ion-list-header>
+   <button ion-item>
+        <ion-icon name="bluetooth" item-start color="primary"></ion-icon>
+        <ion-label>Bluetooth</ion-label>
+        <ion-note item-end>Off</ion-note>
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="call" item-start color="secondary"></ion-icon>
+        <ion-label>Cellular</ion-label>
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="link" item-start color="secondary"></ion-icon>
+        <ion-label>Personal Hotspot</ion-label>
+        <ion-note item-end>Off</ion-note>
+      </button>
+      <ion-item>
+        <ion-label color="dark">Always</ion-label>
+        <ion-radio value="always" checked></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark">Only while phone is locked</ion-label>
+        <ion-radio value="locked"></ion-radio>
+      </ion-item>
+    </ion-list>
+  
+    <ion-list>
+      <ion-list-header>
+        Apps Installed
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-icon name="ionic" item-start color="primary"></ion-icon>
+        <ion-label>Ionic View</ion-label>
+        <button ion-button outline item-end>Uninstall</button>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="brush" item-start color="primary"></ion-icon>
+        <ion-label>Ionic Creator</ion-label>
+        <button ion-button outline item-end>Uninstall</button>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="logo-octocat" item-start color="dark"></ion-icon>
+        <ion-label>Hubstruck</ion-label>
+        <button ion-button outline item-end>Uninstall</button>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="paw" item-start color="danger"></ion-icon>
+        <ion-label>Barkpark</ion-label>
+        <button ion-button outline item-end>Uninstall</button>
+      </ion-item>
+    </ion-list>
+    ** -->
+  
+  </ion-content>
+  

@@ -109,6 +109,13 @@ export class DatabaseProvider {
     });
   }
 
+deleteTask(id){
+  console.log(" delating ... id :"+id);
+  return this.database.executeSql ("DELETE FROM todolistes where idTodo==?",[id]).then((data)=>{
+    console.log('deleted');
+    return data });
+
+}
   updateisDone(task){
   console.log(" item to update "+task.id+"and is" +task.isDone);
     return this.database.executeSql("UPDATE todolistes set isDone=? WHERE idTodo==?", [task.isDone,task.id]).then(data=>{ return data});

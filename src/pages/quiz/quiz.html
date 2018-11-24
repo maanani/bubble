@@ -4,15 +4,23 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>اختبر معلوماتك</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only>
+                <ion-icon name='menu'></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>اختبر معلوماتك</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="settings"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
-
-
 <ion-content padding dir="rtl">
 
     <ion-list *ngIf="quiz.type===0"radio-group>

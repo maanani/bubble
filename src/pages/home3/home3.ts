@@ -4,6 +4,7 @@ import 'rxjs/add/operator/debounceTime';
 import { WpProvider } from '../../providers/wp/wp';
 import{ContentPage} from '../content/content';
 import { QuizPage } from '../quiz/quiz';
+import { SettingPage } from '../setting/setting';
 
 /**
  * Generated class for the Home3Page page.
@@ -20,6 +21,7 @@ import { QuizPage } from '../quiz/quiz';
 export class Home3Page {
 
   courses: Array<any> = new Array<any>();
+  
 
   constructor(public navCtrl: NavController, public wpProvider: WpProvider,public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
@@ -34,6 +36,7 @@ export class Home3Page {
     this.navCtrl.push(ContentPage,{content:course});
 
   }
+ 
   loadquiz(course)
   {
     this.navCtrl.push(QuizPage,{idCourse:course.id});
@@ -54,5 +57,8 @@ export class Home3Page {
         });
     }
   }
+  openModal(){
 
+    this.navCtrl.push(SettingPage,{});
+  }
 }

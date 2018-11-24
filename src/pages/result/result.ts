@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import{Quiz} from '../../models/quiz';
+import { SettingPage } from '../setting/setting';
 
 /**
  * Generated class for the ResultPage page.
@@ -31,5 +32,9 @@ export class ResultPage {
   }
   nextCourse(){
     console.log('Fin ResultPage, go next');
+  }
+  openModal(){
+
+    this.navCtrl.push(SettingPage,{});
   }
   }

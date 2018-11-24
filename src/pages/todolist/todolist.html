@@ -24,9 +24,9 @@
 <ion-content dir="rtl">
 
     <ion-list *ngFor="let cat of categories "> 
-            <ion-item-divider  color="light">{{cat.nomCategorie}}</ion-item-divider>
+            <ion-item-divider  color="gris">{{cat.nomCategorie}}</ion-item-divider>
             <ng-container *ngFor="let item of tasks">
-            <ion-item-sliding text-wrap >
+            <ion-item-sliding #slidingItem text-wrap >
                 <ion-item *ngIf="item.categorieId===cat.idCategorie ">
                     <ion-label >{{item.title}}  </ion-label> 
                     <ion-checkbox name="chk" (click)="checkItem(item)" [(ngModel)]="item.isDone" [checked]="item.isDone" item-right>
@@ -34,17 +34,17 @@
                      </ion-checkbox>   
                     </ion-item>
                      <ion-item-options side="right">
-                            <button ion-button color="secondary" (click)="editData(item.id)">
+                            <button ion-button color="secondary" (click)="editItem(slidingItem,item.id)">
                                 <ion-icon name="paper"></ion-icon>
                             </button>
-                            <button ion-button color="danger" (click)="deleteData(item.id)">
+                            <button ion-button color="danger" (click)="deleteItem(slidingItem,item.id)">
                                 <ion-icon name="trash"></ion-icon>
                             </button>
                         </ion-item-options>
             </ion-item-sliding>
         </ng-container>
     </ion-list>
-    <ion-fab bottom right>
+    <ion-fab top left>
             <button ion-fab mini (click)="presentAddModal()">
                 <ion-icon name="add"></ion-icon>
             </button>

@@ -4,6 +4,7 @@ import 'rxjs/add/operator/debounceTime';
 import { FormControl } from '@angular/forms';
 import { WpProvider } from '../../providers/wp/wp';
 import { DuaaPage } from '../duaa/duaa';
+import { SettingPage } from '../setting/setting';
 
 /**
  * Generated class for the DuaalistPage page.
@@ -100,6 +101,9 @@ this.searchControl= new FormControl();
     
 
   }
-  
+  openModal(){
+
+    this.navCtrl.push(SettingPage,{});
+  }
 }
 

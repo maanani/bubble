@@ -5,6 +5,7 @@ import { SignupPage } from '../signup/signup'; //MM
 
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 /**
  * Generated class for the WelcomePage page.
@@ -23,12 +24,23 @@ const DATABASE_FILE_NAME: string = 'data.db';
 export class WelcomePage {
 
   private db: SQLiteObject;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite, private toast: Toast) {
+connected: boolean;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite, private toast: Toast,private angufireAuth:AngularFireAuth) {
     
   }
 
   ionViewDidLoad() {
+    var user = this.angufireAuth.auth.currentUser;
+
+if (user) {
+
+  this.connected= true;
+  console.log( this.connected+ 'with'+ user.email);
+  // User is signed in.
+} else {
+  this.connected=false
+  // No user is signed in.
+}
     console.log('ionViewDidLoad WelcomePage');
   }
   //MM login boutton action
