@@ -44,7 +44,7 @@ $colors2: (test: #47bb38);
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$loading-ios-spinner-bubbles-color:#127826;
 
 // App Material Design Variables
 // --------------------------------------------------
@@ -58,13 +58,18 @@ $tabs-tab-color-active: color($colors, done);
 //$toolbar-background: color($colors, secondary);
 // Change the color of the segment button text
 $toolbar-active-color: #fff;
-
+//$loading-md-background: transparent;
+$loading-md-color:#127826;
+$loading-md-spinner-bubbles-color:#127826;
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
-
+//$alert-ios-content-max-height:700px !default;
+//$alert-md-content-max-height:700px !default;
+//$alert-ios-content-max-with:700px !default;
+//$alert-md-content-max-with:700px !default;
 
 // App Theme
 // --------------------------------------------------

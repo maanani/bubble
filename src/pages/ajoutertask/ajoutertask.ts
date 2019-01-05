@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ViewController } from 'ionic-angular';
 import { DatabaseProvider } from '../../providers/database/database';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 
 /**
@@ -22,8 +23,9 @@ export class AjoutertaskPage {
     public description:String;
     categories: any;
     idCategorie:any;
-    constructor(public navCtrl: NavController,public viewCtrl: ViewController, public navParams: NavParams, private databaseprovider: DatabaseProvider) {
+    constructor(public navCtrl: NavController,public viewCtrl: ViewController, public navParams: NavParams, private databaseprovider: DatabaseProvider,public ga:GoogleAnalytics) {
      // this.categorie=this.navParams.get('idCategorie')
+     this.googleAnalytics();
     }
   
     ionViewDidLoad() {
@@ -47,6 +49,14 @@ export class AjoutertaskPage {
 
       this.dismiss();
     }
+    googleAnalytics(){
+      this.ga.startTrackerWithId('UA-130246723-1')
+        .then(() => {
+          console.log('Google analytics is ready now');
+          this.ga.trackView('addtask');
+        })
+        .catch(e => console.log('Error starting GoogleAnalytics', e));
+      }
   
   }
   

@@ -4,21 +4,23 @@ c pages and navigation.
 
   <ion-navbar>
     <ion-title>وكالات</ion-title>
-  </ion-navbar>
+  
 
+    </ion-navbar>
+  
 </ion-header>
 
 
  
-<ion-content dir="rtl">
+<ion-content >
  
-    <ion-searchbar [(ngModel)]="searchTerm"  [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchTerm"  [formControl]="searchControl" [showCancelButton]="showCancelButton" [cancelButtonText]="showCancelText" (ionInput)="onSearchInput()"></ion-searchbar>
     <div *ngIf="searching" class="spinner-container">
         <ion-spinner></ion-spinner>
     </div>
     <ion-list>
         <ion-item *ngFor="let agence of result" (click)="showDetails(agence.nom)">
-            {{agence.nom}}
+            {{agence.nom}} <p> {{agence.ville}}</p>
         </ion-item>
     </ion-list>
  

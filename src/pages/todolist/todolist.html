@@ -6,18 +6,10 @@
 -->
 <ion-header>
     <ion-navbar>
-        <ion-buttons left>
-            <button ion-button icon-only>
-                <ion-icon name='menu'></ion-icon>
-            </button>
-        </ion-buttons>
+     
         <ion-title>اللائحة</ion-title>
 
-        <ion-buttons end>
-            <button ion-button icon-only (click)="openModal()">
-                <ion-icon name="settings"></ion-icon>
-            </button>
-        </ion-buttons>
+
     </ion-navbar>
 </ion-header>
 
@@ -29,7 +21,7 @@
             <ion-item-sliding #slidingItem text-wrap >
                 <ion-item *ngIf="item.categorieId===cat.idCategorie ">
                     <ion-label >{{item.title}}  </ion-label> 
-                    <ion-checkbox name="chk" (click)="checkItem(item)" [(ngModel)]="item.isDone" [checked]="item.isDone" item-right>
+                    <ion-checkbox name="chk" color="done" (click)="checkItem(item)" [(ngModel)]="item.isDone" [checked]="item.isDone" item-right>
                
                      </ion-checkbox>   
                     </ion-item>
@@ -45,8 +37,8 @@
         </ng-container>
     </ion-list>
     <ion-fab top left>
-            <button ion-fab mini (click)="presentAddModal()">
-                <ion-icon name="add"></ion-icon>
+            <button  color="favorite" ion-fab mini (click)="presentAddModal()">
+                <ion-icon name="add" ></ion-icon>
             </button>
     
         </ion-fab>

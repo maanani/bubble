@@ -1,7 +1,47 @@
 page-content {
     .hiddenText {
         display: none;
+       
     }
-    
+    .newcard{
+        //background: color($colors, vimeo);
+       // margin: auto ;
+       //position: relative;
+       //top:3%;
+        margin-top: 0%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-size:18px;	    
+       // height: 800px;
 
+      }
+      .slide-zoom {
+        height: 100%;
+        }
+        .masters {
+            background-color: color($colors, gris);
+          }
+        .nextBtn{
+            position: absolute;
+            left: 0vw;
+            top: 40vh;
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;
+            border: none;
+            background:color($colors, favorite) ;
+         }
+         .backBtn{
+            position: absolute;
+            right: 0vw;
+            top: 40vh;
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;
+            border: none;
+           background:color($colors, favorite) ;
+         }
+         
 }
+    

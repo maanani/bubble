@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { Home2Page } from './home2';
+import { OmraPage } from './omra';
 
 @NgModule({
   declarations: [
-    Home2Page,
+    OmraPage,
   ],
   imports: [
-    IonicPageModule.forChild(Home2Page),
+    IonicPageModule.forChild(OmraPage),
   ],
 })
-export class Home2PageModule {}
+export class OmraPageModule {}

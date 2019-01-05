@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 //import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, AlertController, Item } from 'ionic-angular';
 import { TodolistProvider } from '../../providers/todolist/todolist';
 import {DatabaseProvider} from'../../providers/database/database';
 //import {AddtaskPage} from '../add-task/add-task';
 import { AjoutertaskPage } from '../ajoutertask/ajoutertask';
 import { EditListPage } from './../edit-list/edit-list';
 import { SettingPage } from '../setting/setting';
+import { UpdatetaskPage } from '../updatetask/updatetask';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 //import { AddTaskPage } from '../add-task/add-task';
 /**
  * Generated class for the TodolistPage page.
@@ -29,7 +31,8 @@ export class TodolistPage {
  public categories=[];
  public famille=[];
 
-  constructor(public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams,private databaseprovider: DatabaseProvider, private alertCtrl:AlertController) {
+  constructor(public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams,private databaseprovider: DatabaseProvider, private alertCtrl:AlertController,public ga:GoogleAnalytics) {
+    this.googleAnalytics();
     this.databaseprovider.getDatabaseState().subscribe(rdy => {
       if (rdy) {
         this.loadCategoriesData();
@@ -141,6 +144,18 @@ export class TodolistPage {
   
 
   editItem(slidingItem,id){
+    
+
+    this.navCtrl.push(UpdatetaskPage,{item:id});
+    
+    // var task=this.databaseprovider.getTask(id);
+    // console.log("your task"+task);
+
+
+   
+    //refresh après ajout
+   
+    
   // aller sur page modification avec en param id ?
   }
   
@@ -155,4 +170,12 @@ export class TodolistPage {
   openModal(){
     this.navCtrl.push(SettingPage,{});
   }
+  googleAnalytics(){
+    this.ga.startTrackerWithId('UA-130246723-1')
+      .then(() => {
+        console.log('Google analytics is ready now');
+        this.ga.trackView('todolist');
+      })
+      .catch(e => console.log('Error starting GoogleAnalytics', e));
+    }
 }

@@ -1,34 +1,972 @@
 [
   {
-    "nom": "ILS voyage",
-    "telephone": "0522102030",
-    "adresse": "coordonéé google",
-    "ville": "casablanca",
-    "fb": "casablanca",
-    "site": "http://www.ils.ma"
+    "nom": "AMODOU TRAVEL",
+    "ville": "Agadir",
+    "telephone": "05282-92279"
   },
   {
-    "nom": " Atlas voyage",
-    "telephone": "0522405060",
-    "adresse": "coordonéé google",
-    "ville": "casablanca",
-    "fb": "casablanca",
-    "site": "http://www.atlasvoyage.ma"
+    "nom": "CREME SOLAIRE VOYAGES",
+    "ville": "Agadir",
+    "telephone": "0666-052959"
   },
   {
-    "nom": "Al Awail",
-    "telephone": "0537102030",
-    "adresse": "coordonéé google",
+    "nom": "CROIX DU SUD TOURS",
+    "ville": "Agadir",
+    "telephone": "05288-25225"
+  },
+  {
+    "nom": "DARKOUM VOYAGES",
+    "ville": "Agadir",
+    "telephone": "05288-40711"
+  },
+  {
+    "nom": "DOUNIT VOYAGES",
+    "ville": "Agadir",
+    "telephone": "05288-42111"
+  },
+  {
+    "nom": "GO HOLIDAY",
+    "ville": "Agadir",
+    "telephone": "052882-6801"
+  },
+  {
+    "nom": "KAOUTAR TOURS",
+    "ville": "Agadir",
+    "telephone": "05288-44819"
+  },
+  {
+    "nom": "MAWASSIM VOYAGES",
+    "ville": "Agadir",
+    "telephone": "05376-70105"
+  },
+  {
+    "nom": "PEGASE VOYAGES",
+    "ville": "Agadir",
+    "telephone": "05280-00000"
+  },
+  {
+    "nom": "SAN MARINO VOYAGES",
+    "ville": "Agadir",
+    "telephone": "05282-30021"
+  },
+  {
+    "nom": "SWIFT TRAVEL",
+    "ville": "Agadir",
+    "telephone": "05288-24334"
+  },
+  {
+    "nom": "VISION TOURS",
+    "ville": "Agadir",
+    "telephone": "05288-40179"
+  },
+  {
+    "nom": "AIN ASSERDOUNE VOYAGES",
+    "ville": "Beni-Mellal",
+    "telephone": "05234-88694"
+  },
+  {
+    "nom": "ANYMA SERVICES TRAVEL",
+    "ville": "Beni-Mellal",
+    "telephone": "05234-72010"
+  },
+  {
+    "nom": "IMILCHIL VOYAGES",
+    "ville": "Beni-Mellal",
+    "telephone": "05234-85489"
+  },
+  {
+    "nom": "TORIN VOYAGES",
+    "ville": "Beni-Mellal",
+    "telephone": "05234-80191"
+  },
+  {
+    "nom": "SB VOYAGES",
+    "ville": "Berchid",
+    "telephone": "05222-04881"
+  },
+  {
+    "nom": "LAHSAINI VOYAGES",
+    "ville": "Berkane",
+    "telephone": "05366-16213"
+  },
+  {
+    "nom": "BELKASMI VOYAGES",
+    "ville": "Berkane",
+    "telephone": "05366-16726"
+  },
+  {
+    "nom": "ACCESS HOLIDAYS & EVENTS",
+    "ville": "Casablanca",
+    "telephone": "05224-74848"
+  },
+  {
+    "nom": "ACTIV TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05222-70404"
+  },
+  {
+    "nom": "AL ASSIL VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05224-48259"
+  },
+  {
+    "nom": "AL QUADDISSIA VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05376-39257"
+  },
+  {
+    "nom": "ALR TOURS",
+    "ville": "Casablanca",
+    "telephone": "05228-60389"
+  },
+  {
+    "nom": "AMAZONE TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05225-51554"
+  },
+  {
+    "nom": "AMIS TOURS",
+    "ville": "Casablanca",
+    "telephone": "05224-70356"
+  },
+  {
+    "nom": "ANDALOUSSIA VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05224-76298"
+  },
+  {
+    "nom": "ATLANTIS VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05224-47943"
+  },
+  {
+    "nom": "ATLAS VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "08020-02020"
+  },
+  {
+    "nom": "AZ TRAVEL SERVICES",
+    "ville": "Casablanca",
+    "telephone": "05225-42916"
+  },
+  {
+    "nom": "CARLSON WAGONLIT",
+    "ville": "Casablanca",
+    "telephone": "05222-00039"
+  },
+  {
+    "nom": "DIRECTOURS",
+    "ville": "Casablanca",
+    "telephone": "05224-76210"
+  },
+  {
+    "nom": "DOLFI VOYAGES",
+    "ville": "Casablanca",
+    "telephone": ""
+  },
+  {
+    "nom": "DOUNIA TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05222-77359"
+  },
+  {
+    "nom": "EAGLE VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "0661-292334"
+  },
+  {
+    "nom": "EL BAHI VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05222-02006"
+  },
+  {
+    "nom": "EL HANSALI TOURS",
+    "ville": "Casablanca",
+    "telephone": "05222-18812"
+  },
+  {
+    "nom": "EL YAKOUT VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05224-44474"
+  },
+  {
+    "nom": "ESPACE TOURISME",
+    "ville": "Casablanca",
+    "telephone": "05225-03504"
+  },
+  {
+    "nom": "FUN & MOTIVATION TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05227-21313"
+  },
+  {
+    "nom": "GIBMAR TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05222-61461"
+  },
+  {
+    "nom": "HAPPY TIMES TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05228-93162"
+  },
+  {
+    "nom": "ICO TOURS INTERNATIONAL",
+    "ville": "Casablanca",
+    "telephone": "05222-08076"
+  },
+  {
+    "nom": "ID TOURS",
+    "ville": "Casablanca",
+    "telephone": "05224-84632"
+  },
+  {
+    "nom": "ILS VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05222-60036"
+  },
+  {
+    "nom": "INTER VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05222-03980"
+  },
+  {
+    "nom": "JAMBO TOURS",
+    "ville": "Casablanca",
+    "telephone": "05229-42828"
+  },
+  {
+    "nom": "JINANE SKY",
+    "ville": "Casablanca",
+    "telephone": "05225-94070"
+  },
+  {
+    "nom": "LINA TOURS",
+    "ville": "Casablanca",
+    "telephone": "05222-94306"
+  },
+  {
+    "nom": "MAMOUN TOURS",
+    "ville": "Casablanca",
+    "telephone": "05225-94070"
+  },
+  {
+    "nom": "MANAR VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05223-76377"
+  },
+  {
+    "nom": "MEDINE VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05223-00484"
+  },
+  {
+    "nom": "MHT TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05224-84849"
+  },
+  {
+    "nom": "MILLENIUM TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05222-37365"
+  },
+  {
+    "nom": "MONARCH TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05224-70070"
+  },
+  {
+    "nom": "MOROCCO TOURS",
+    "ville": "Casablanca",
+    "telephone": "05222-73811"
+  },
+  {
+    "nom": "MTM TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05229-96601"
+  },
+  {
+    "nom": "NASSIM VOYAGES",
+    "ville": "Casablanca",
+    "telephone": ""
+  },
+  {
+    "nom": "OCEANIC AIR TOURS",
+    "ville": "Casablanca",
+    "telephone": "05224-84539"
+  },
+  {
+    "nom": "OCTAVTOUR",
+    "ville": "Casablanca",
+    "telephone": "05222-52629"
+  },
+  {
+    "nom": "OLIVE BRANCH TOURS",
+    "ville": "Casablanca",
+    "telephone": "05222-61416"
+  },
+  {
+    "nom": "PALMERAIE BLEU VOYAGE",
+    "ville": "Casablanca",
+    "telephone": "05223-87555"
+  },
+  {
+    "nom": "PLEIN CIEL TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05225-41000"
+  },
+  {
+    "nom": "PLEIN CIEL VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05223-00004"
+  },
+  {
+    "nom": "PREFERENCE VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05222-70080"
+  },
+  {
+    "nom": "PRESTO VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05223-17894"
+  },
+  {
+    "nom": "RANDONNEE VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05228-60060"
+  },
+  {
+    "nom": "REAL TRA VEL SERVICE",
+    "ville": "Casablanca",
+    "telephone": "05225-41963"
+  },
+  {
+    "nom": "S' TOURS",
+    "ville": "Casablanca",
+    "telephone": "05229-54000"
+  },
+  {
+    "nom": "SAFARCLlCK.COM MAROC",
+    "ville": "Casablanca",
+    "telephone": "05222-66969"
+  },
+  {
+    "nom": "SAFARIATES AL AHMADIYA",
+    "ville": "Casablanca",
+    "telephone": "05222-36750"
+  },
+  {
+    "nom": "SAYTRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05223-68003"
+  },
+  {
+    "nom": "SERVICES MOTIVATION ET EVENTS",
+    "ville": "Casablanca",
+    "telephone": "05229-45151"
+  },
+  {
+    "nom": "SIROCCO EVEN TOURS",
+    "ville": "Casablanca",
+    "telephone": "05229-43124"
+  },
+  {
+    "nom": "SORM TOURS INTERNATIONAL",
+    "ville": "Casablanca",
+    "telephone": ""
+  },
+  {
+    "nom": "SUN TOURS",
+    "ville": "Casablanca",
+    "telephone": "05222-02550"
+  },
+  {
+    "nom": "SUPER TOURS",
+    "ville": "Casablanca",
+    "telephone": "05222-63783"
+  },
+  {
+    "nom": "TAHA TOURS",
+    "ville": "Casablanca",
+    "telephone": "05222-98686"
+  },
+  {
+    "nom": "TRANSATOUR MAROC",
+    "ville": "Casablanca",
+    "telephone": "05222-02521"
+  },
+  {
+    "nom": "TRAVEL CENTER",
+    "ville": "Casablanca",
+    "telephone": "05224-40355"
+  },
+  {
+    "nom": "UNIVERS VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05229-42727"
+  },
+  {
+    "nom": "VENIZIA TRAVEL",
+    "ville": "Casablanca",
+    "telephone": "05228-11631"
+  },
+  {
+    "nom": "WEB TOURS",
+    "ville": "Casablanca",
+    "telephone": "05225-42259"
+  },
+  {
+    "nom": "WHITE CAMEL TOURS",
+    "ville": "Casablanca",
+    "telephone": "05225-40117"
+  },
+  {
+    "nom": "AL JAZIRA TOURISME TRAVEL SERVICES",
+    "ville": "Casablanca",
+    "telephone": "05222-60484"
+  },
+  {
+    "nom": "TOURS INTERNATIONAL",
+    "ville": "Casablanca",
+    "telephone": ""
+  },
+  {
+    "nom": "GOLDEN TRAVEL TOURISM",
+    "ville": "Fes",
+    "telephone": "05359-30402"
+  },
+  {
+    "nom": "KARIMA VOYAGES",
+    "ville": "Fes",
+    "telephone": "05356-50247"
+  },
+  {
+    "nom": "KING'S HOLIDAYS",
+    "ville": "Fes",
+    "telephone": "05359-30499"
+  },
+  {
+    "nom": "NUMBER ONE VOYAGES",
+    "ville": "Fes",
+    "telephone": "05222-23754"
+  },
+  {
+    "nom": "OBJECTIF MAROC",
+    "ville": "Fes",
+    "telephone": "05356-52816"
+  },
+  {
+    "nom": "SOLAIR TRAVEL",
+    "ville": "Fes",
+    "telephone": "05356-22926"
+  },
+  {
+    "nom": "SWEET VOYAGES",
+    "ville": "Fes",
+    "telephone": "05356-53810"
+  },
+  {
+    "nom": "ZALAGH VOYAGES ET TOURISME",
+    "ville": "Fes",
+    "telephone": "05356-52049"
+  },
+  {
+    "nom": "AL HATNIA VOYAGES",
+    "ville": "Fkih Ben Saleh",
+    "telephone": "05234-34038"
+  },
+  {
+    "nom": "GHAZZA VOYAGES",
+    "ville": "Fkih Ben Saleh",
+    "telephone": "05225-42300"
+  },
+  {
+    "nom": "INEZGANE VOYAGES",
+    "ville": "Inezgane",
+    "telephone": "05288-34545"
+  },
+  {
+    "nom": "AYUR TRAVEL",
+    "ville": "Kenitra",
+    "telephone": "05373-24665"
+  },
+  {
+    "nom": "BOUNOUAR TOURS",
+    "ville": "Kenitra",
+    "telephone": "05373-74124"
+  },
+  {
+    "nom": "SEBOU VOYAGES",
+    "ville": "Kenitra",
+    "telephone": "05373-78237"
+  },
+  {
+    "nom": "SMACT VOYAGES",
+    "ville": "Kenitra",
+    "telephone": "0663-607306"
+  },
+  {
+    "nom": "TIZI RANDONNEES",
+    "ville": "Kenitra",
+    "telephone": "05373-60981"
+  },
+  {
+    "nom": "CARL TON TRA VEL AGENCY",
+    "ville": "Khouribga",
+    "telephone": "05234-90935"
+  },
+  {
+    "nom": "EL QODS VOYAGES",
+    "ville": "Khouribga",
+    "telephone": "05235-63333"
+  },
+  {
+    "nom": "ETOILE DU CENTRE VOYAGES",
+    "ville": "Khouribga",
+    "telephone": "05235-64678"
+  },
+  {
+    "nom": "KHOURIBGA VOYAGES",
+    "ville": "Khouribga",
+    "telephone": "05234-93420"
+  },
+  {
+    "nom": "ALGHOUFRANE VOYAGES",
+    "ville": "Khouribga",
+    "telephone": "05235-67603"
+  },
+  {
+    "nom": "ARREMAL TRA VELS",
+    "ville": "Laayoune",
+    "telephone": "05289-81202"
+  },
+  {
+    "nom": "AGENCE DE VOYAGE QAFILAT TAYBA",
+    "ville": "Marrakech",
+    "telephone": "0524 335508"
+  },
+  {
+    "nom": "ANDO TRAVEL",
+    "ville": "Marrakech",
+    "telephone": "05242-91479"
+  },
+  {
+    "nom": "ASFAR TASSAOUTE",
+    "ville": "Marrakech",
+    "telephone": ""
+  },
+  {
+    "nom": "BARIGOU VOYAGES",
+    "ville": "Marrakech",
+    "telephone": "05244-23099"
+  },
+  {
+    "nom": "EM VOYAGES",
+    "ville": "Marrakech",
+    "telephone": "05244-35254"
+  },
+  {
+    "nom": "FIRST CLASS TRAVEL",
+    "ville": "Marrakech",
+    "telephone": "05244-30331"
+  },
+  {
+    "nom": "HABTI VOYAGES",
+    "ville": "Marrakech",
+    "telephone": ""
+  },
+  {
+    "nom": "HIBISCUS TRAVEL",
+    "ville": "Marrakech",
+    "telephone": "052444-9966"
+  },
+  {
+    "nom": "IDEAL TRAVEL MOROCCO",
+    "ville": "Marrakech",
+    "telephone": "05244-30306"
+  },
+  {
+    "nom": "IMAGINE LE VOYAGE",
+    "ville": "Marrakech",
+    "telephone": "05244-20186"
+  },
+  {
+    "nom": "KSAR TOURS",
+    "ville": "Marrakech",
+    "telephone": "05244-20833"
+  },
+  {
+    "nom": "MARRAKECH HOLIDAYS",
+    "ville": "Marrakech",
+    "telephone": "05244-58236"
+  },
+  {
+    "nom": "MONDIAL VOYAGES",
+    "ville": "Marrakech",
+    "telephone": "05244-38484"
+  },
+  {
+    "nom": "MOROCCO TRAVEL HORIZON",
+    "ville": "Marrakech",
+    "telephone": "05243-71787"
+  },
+  {
+    "nom": "MOUNTAIN VOYAGES",
+    "ville": "Marrakech",
+    "telephone": "05244-21996"
+  },
+  {
+    "nom": "OPERA VOYAGE",
+    "ville": "Marrakech",
+    "telephone": "05244-57575"
+  },
+  {
+    "nom": "PALM SAKANE VOYAGES",
+    "ville": "Marrakech",
+    "telephone": "05244-46446"
+  },
+  {
+    "nom": "PALMIERS VOYAGES",
+    "ville": "Marrakech",
+    "telephone": "05244-47848"
+  },
+  {
+    "nom": "PAMPA VOYAGES",
+    "ville": "Marrakech",
+    "telephone": "05244-31052"
+  },
+  {
+    "nom": "RECEPTOURS",
+    "ville": "Marrakech",
+    "telephone": "05244-49162"
+  },
+  {
+    "nom": "SCALIGERA VIAGGI",
+    "ville": "Marrakech",
+    "telephone": "05243-36527"
+  },
+  {
+    "nom": "SOUMA TRAVEL",
+    "ville": "Marrakech",
+    "telephone": "05244-32143"
+  },
+  {
+    "nom": "SOUMYA VOYAGES",
+    "ville": "Casablanca",
+    "telephone": "05222-22696"
+  },
+  {
+    "nom": "TRAVEL LlNK MAROC",
+    "ville": "Marrakech",
+    "telephone": "05244-32143"
+  },
+  {
+    "nom": "VOYAGES 21",
+    "ville": "Marrakech",
+    "telephone": "05243-31007"
+  },
+  {
+    "nom": "Z TOURS",
+    "ville": "Marrakech",
+    "telephone": "05376-14680"
+  },
+  {
+    "nom": "AGENCE DE VOY AGE ADRAR",
+    "ville": "Meknes",
+    "telephone": "05355-23211"
+  },
+  {
+    "nom": "ALLA VOYAGES",
+    "ville": "Meknes",
+    "telephone": "05355-20305"
+  },
+  {
+    "nom": "ALPHA OASIS TOURS",
+    "ville": "Meknes",
+    "telephone": "05354-03718"
+  },
+  {
+    "nom": "DRISSI VOYAGES",
+    "ville": "Meknes",
+    "telephone": "05355-12831"
+  },
+  {
+    "nom": "EL YOUSR VOYAGES ET TOURISME",
+    "ville": "Meknes",
+    "telephone": "05355-50143"
+  },
+  {
+    "nom": "MEKNES VOYAGES",
+    "ville": "Meknes",
+    "telephone": "05355-15176"
+  },
+  {
+    "nom": "NEW BOUSSOLE TRAVEL",
+    "ville": "Meknes",
+    "telephone": "0661-233251"
+  },
+  {
+    "nom": "OUALILI VOYAGES",
+    "ville": "Meknes",
+    "telephone": "05355-24214"
+  },
+  {
+    "nom": "ALKHOUZAMA VOYAGES",
+    "ville": "Nador",
+    "telephone": "05366-07946"
+  },
+  {
+    "nom": "FAVORI VOYAGES",
+    "ville": "Nador, Casabalnca",
+    "telephone": "05222-00591"
+  },
+  {
+    "nom": "MANATOURS",
+    "ville": "Nador",
+    "telephone": "05366-06860"
+  },
+  {
+    "nom": "AL WAHDA VOYAGES",
+    "ville": "Oujda",
+    "telephone": "05567-02722"
+  },
+  {
+    "nom": "ESSALAMA VOYAGES",
+    "ville": "Oujda",
+    "telephone": "05366-81301"
+  },
+  {
+    "nom": "EUROPA VOYAGES",
+    "ville": "Oujda",
+    "telephone": "05377-00303"
+  },
+  {
+    "nom": "ISLY VOYAGES",
+    "ville": "Oujda",
+    "telephone": "05366-81470"
+  },
+  {
+    "nom": "ISRAE VOYAGES",
+    "ville": "Oujda",
+    "telephone": "05367-07122"
+  },
+  {
+    "nom": "LAYA TOURS",
+    "ville": "Oujda",
+    "telephone": "05366-88825"
+  },
+  {
+    "nom": "MAROC VOYAGES TOURISME",
+    "ville": "Oujda",
+    "telephone": "05366-83993"
+  },
+  {
+    "nom": "OUJDA VOYAGES",
+    "ville": "Oujda",
+    "telephone": "05363-89333"
+  },
+  {
+    "nom": "AHLATOURS",
     "ville": "Rabat",
-    "fb": "Rabat",
-    "site": "http://www.alawail.ma"
+    "telephone": "05377-04779"
   },
   {
-    "nom": " Favorie voyage",
-    "telephone": "0537102030",
-    "adresse": "coordonéé google",
+    "nom": "AL HASSANIA VOYAGES",
     "ville": "Rabat",
-    "fb": "Rabat",
-    "site": "http://www.favorievoyage.ma"
+    "telephone": "05376-39257"
+  },
+  {
+    "nom": "ASFAR TOUR HASSAN",
+    "ville": "Rabat",
+    "telephone": "05377-00804"
+  },
+  {
+    "nom": "AVIATOURS",
+    "ville": "Rabat",
+    "telephone": "05377-31131"
+  },
+  {
+    "nom": "BLUERIVER VOYAGES",
+    "ville": "Rabat",
+    "telephone": "0661-294493"
+  },
+  {
+    "nom": "CAP TOURS",
+    "ville": "Rabat",
+    "telephone": "05377-35709"
+  },
+  {
+    "nom": "CHELLAH VOYAGES",
+    "ville": "Rabat",
+    "telephone": "05372-00820"
+  },
+  {
+    "nom": "DIJATOURS",
+    "ville": "Rabat",
+    "telephone": "05376-60219"
+  },
+  {
+    "nom": "DIWANTOURS",
+    "ville": "Rabat",
+    "telephone": "05377-25452"
+  },
+  {
+    "nom": "EMI TOURS",
+    "ville": "Rabat",
+    "telephone": "05377-77722"
+  },
+  {
+    "nom": "FADEL VOYAGES",
+    "ville": "Rabat",
+    "telephone": "05372-00602"
+  },
+  {
+    "nom": "FAMILY VOYAGES",
+    "ville": "Rabat",
+    "telephone": "05377-74331"
+  },
+  {
+    "nom": "FAN TOURS",
+    "ville": "Rabat",
+    "telephone": "05372-03272"
+  },
+  {
+    "nom": "ILYA TOURS",
+    "ville": "Rabat",
+    "telephone": "05377-63215"
+  },
+  {
+    "nom": "ITAJ VOYAGES",
+    "ville": "Rabat",
+    "telephone": "05377-07969"
+  },
+  {
+    "nom": "MAJESTIC TOURS",
+    "ville": "Rabat",
+    "telephone": "05376-75724"
+  },
+  {
+    "nom": "MODERN TRAVEL AGENCY",
+    "ville": "Rabat",
+    "telephone": "05377-04691"
+  },
+  {
+    "nom": "NAPOLEON VOYAGES",
+    "ville": "Rabat",
+    "telephone": "05375-71733"
+  },
+  {
+    "nom": "NOUR VOYAGES",
+    "ville": "Rabat",
+    "telephone": "05376-86815"
+  },
+  {
+    "nom": "PREMICES VOYAGES",
+    "ville": "Rabat, Casablanca",
+    "telephone": "05377-73321"
+  },
+  {
+    "nom": "SAFARI VOYAGES",
+    "ville": "Rabat",
+    "telephone": "05372-62720"
+  },
+  {
+    "nom": "TERRATOUR",
+    "ville": "Rabat",
+    "telephone": "05376-35750"
+  },
+  {
+    "nom": "VOYAGES SANS FRANTIERES",
+    "ville": "Rabat",
+    "telephone": "05377-08215"
+  },
+  {
+    "nom": "LOKA VOYAGES",
+    "ville": "Safi",
+    "telephone": "05246-12671"
+  },
+  {
+    "nom": "AZURA TOURS",
+    "ville": "Settat",
+    "telephone": "05283-36833"
+  },
+  {
+    "nom": "BISSAN VOYAGESET TOURISME",
+    "ville": "Tanger",
+    "telephone": "05224-41737"
+  },
+  {
+    "nom": "FLANDRIA VOYAGES",
+    "ville": "Tanger",
+    "telephone": "05399-41254"
+  },
+  {
+    "nom": "GULLIVER VOYAGES",
+    "ville": "Tanger",
+    "telephone": "05393-41473"
+  },
+  {
+    "nom": "HISPAMAROC",
+    "ville": "Tanger",
+    "telephone": "05393-22281"
+  },
+  {
+    "nom": "HITVOYAGES",
+    "ville": "Tanger",
+    "telephone": "05399-36877"
+  },
+  {
+    "nom": "IBN BATOUTA",
+    "ville": "Tanger",
+    "telephone": "05399-32218"
+  },
+  {
+    "nom": "LEHYAN TRAVEL",
+    "ville": "Tanger",
+    "telephone": "05399-31327"
+  },
+  {
+    "nom": "MOROCCO TOURS ORGANISATION",
+    "ville": "Tanger",
+    "telephone": "05399-42262"
+  },
+  {
+    "nom": "NORD FRONTIERE",
+    "ville": "Tanger",
+    "telephone": "05399-38926"
+  },
+  {
+    "nom": "TRAVEL AGENCY SAVA",
+    "ville": "Tanger",
+    "telephone": "05393-25795"
+  },
+  {
+    "nom": "TAZA VOYAGES",
+    "ville": "Taza",
+    "telephone": "05356-72691"
+  },
+  {
+    "nom": "ALAARABIA VOYAGES ET TOURISME",
+    "ville": "Temara",
+    "telephone": "05376-02323"
+  },
+  {
+    "nom": "TAKOTOURS",
+    "ville": "Temara",
+    "telephone": "05376-18283"
+  },
+  {
+    "nom": "YAZ TOURS",
+    "ville": "Temara",
+    "telephone": "05376-14680"
+  },
+  {
+    "nom": "ESSARAHA VOYAGES",
+    "ville": "Tiznit",
+    "telephone": "05286-01315"
+  },
+  {
+    "nom": "TIZNIT VOYAGE",
+    "ville": "Tiznit",
+    "telephone": "05288-62117"
   }
 ]

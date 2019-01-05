@@ -6,6 +6,7 @@ import { TabsPage } from '../tabs/tabs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { regexValidators } from '../validators/validator';
 import { LoginPage } from '../login/login';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 
 /**
@@ -22,8 +23,8 @@ import { LoginPage } from '../login/login';
 })
 export class ResetpwdPage {
   resetForm: FormGroup;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private angufireAuth:AngularFireAuth, private alertCtrl: AlertController,private formBuilder: FormBuilder ) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, private angufireAuth:AngularFireAuth, private alertCtrl: AlertController,private formBuilder: FormBuilder,public ga: GoogleAnalytics ) {
+this.googleAnalytics();
     this.resetForm = this.formBuilder.group({
 
       email: [
@@ -97,4 +98,12 @@ export class ResetpwdPage {
     });
     alert.present();
   }
+  googleAnalytics(){
+    this.ga.startTrackerWithId('UA-130246723-1')
+      .then(() => {
+        console.log('Google analytics is ready now');
+        this.ga.trackView('resetpass');
+      })
+      .catch(e => console.log('Error starting GoogleAnalytics', e));
+    }
 }

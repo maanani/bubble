@@ -37,32 +37,33 @@ export class MyApp {
       this.initializeApp();
 
       
-      splashScreen.hide();
+      //splashScreen.hide();
     });
   }
   initializeApp(): void {
 
     this.networkService.initializeNetworkEvents();
-    this.angufireAuth.authState
-				.subscribe(
-					user => {
+    this.rootPage = TabsPage;
+    // this.angufireAuth.authState
+		// 		.subscribe(
+		// 			user => {
             
-						if (user) {
-							this.rootPage = TabsPage;
-						} else {
-							this.rootPage = WelcomePage;
-						}
-					},
-					() => {
-						this.rootPage = WelcomePage;
-					}
-				);
+		// 				if (user) {
+		// 					this.rootPage = TabsPage;
+		// 				} else {
+		// 					this.rootPage = WelcomePage;
+		// 				}
+		// 			},
+		// 			() => {
+		// 				this.rootPage = WelcomePage;
+		// 			}
+		// 		);
 
     this.networkService.getNetworkStatus().subscribe(data => {
       console.log('platform ready', data);
       this.toast.create({
         message: data? 'No connection':' connection ' + this.networkService.getNetworkType(),
-        duration: 3000,
+        duration: 1000,
       }).present();
     });
   }

@@ -6,6 +6,7 @@ import { SignupPage } from '../signup/signup'; //MM
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 /**
  * Generated class for the WelcomePage page.
@@ -25,8 +26,8 @@ export class WelcomePage {
 
   private db: SQLiteObject;
 connected: boolean;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite, private toast: Toast,private angufireAuth:AngularFireAuth) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite, private toast: Toast,private angufireAuth:AngularFireAuth, public ga:GoogleAnalytics) {
+    this.googleAnalytics();
   }
 
   ionViewDidLoad() {
@@ -119,4 +120,12 @@ if (user) {
 
     });
   }
+  googleAnalytics(){
+    this.ga.startTrackerWithId('UA-130246723-1')
+      .then(() => {
+        console.log('Google analytics is ready now');
+        this.ga.trackView('welcome');
+      })
+      .catch(e => console.log('Error starting GoogleAnalytics', e));
+    }
 }

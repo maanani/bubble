@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Nossouk</name>
+    <name>مناسك</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.1.100:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -18,7 +18,7 @@
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="10000" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
@@ -93,7 +93,9 @@
     <allow-navigation href="http://172.20.10.2:8100" sessionid="a0162c9e" />
     <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
     <plugin name="cordova-plugin-network-information" spec="2.0.1" />
-    <allow-navigation href="http://192.168.1.100:8100" sessionid="83ef837a" />
     <engine name="android" spec="^7.1.1" />
     <engine name="ios" spec="4.5.5" />
+    <plugin name="cordova-plugin-google-analytics" spec="1.8.6">
+        <variable name="GMS_VERSION" value="11.0.1" />
+    </plugin>
 </widget>

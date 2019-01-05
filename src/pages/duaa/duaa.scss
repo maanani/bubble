@@ -5,13 +5,14 @@ page-duaa {
     position: relative;
     text-align: center;
     }
+   
     ion-col {
         padding: 0;
       }
       
     ion-slide{
         .swiper-slide {
-            align-items: flex-start; //pour remonter le slider au haut de la page , par defaut c'est centrer
+           // align-items: flex-start; //pour remonter le slider au haut de la page , par defaut c'est centrer
         }
         .slides {
         height: auto;
@@ -20,7 +21,7 @@ page-duaa {
       .swiper-pagination {
         bottom: 0px;
       }
-      .slide-zoom {
+     .slide-zoom {
         height: 100%;
     }
 }
@@ -30,12 +31,13 @@ page-duaa {
        position: relative;
        text-align: center;
        //padding: 0;
-       //font-size: 1024%;
-        background: color($colors, gris);
+        font-size: large !important;
+        background: color($colors, favorite);
         border-radius: 10px;
-        margin-bottom: 10px;
+       // margin-bottom: 100px;
         //margin-top: 0;
        // width: 100%;
+      //height: 40%;
         
         //margin-left: 10px;
     //margin-top:0px

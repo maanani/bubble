@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+    
+      <ion-title>العمرة</ion-title>
+  
+      
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content dir="rtl"  padding id="Home3Page">
+  
+    <ion-list>
+        <ion-card class="newcard" *ngFor="let course of courses">
+        <ion-card-content>
+          <h2> {{course.name}} </h2>
+        </ion-card-content>
+        <ion-item> 
+          <ion-grid>
+          <ion-row > 
+            <ion-col class="action">
+              <button ion-button icon-left color="done" clear (click)="loadcontent(course)">
+                  <ion-icon name="ios-book"></ion-icon>
+                  <p>محتوى</p>   
+              </button>
+            </ion-col>
+            <ion-col class="action">
+              <button ion-button icon-left color="done" clear (click)="loadquiz(course)">
+                  <ion-icon name="md-checkmark-circle-outline"></ion-icon>
+                  <p>أسئلة</p> 
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        </ion-item>
+      </ion-card>       
+      </ion-list>
+  </ion-content>

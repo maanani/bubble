@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController,App, Nav } from 'i
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Home3Page } from '../home3/home3';
 import { WelcomePage } from '../welcome/welcome';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 /**
  * Generated class for the SettingPage page.
@@ -22,7 +23,8 @@ export class SettingPage {
 
 
   connected: boolean;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl:AlertController, private angufireAuth:AngularFireAuth, public app :App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl:AlertController, private angufireAuth:AngularFireAuth, public app :App,public ga:GoogleAnalytics) {
+  this.googleAnalytics();
   }
 
   ionViewDidLoad() {
@@ -61,4 +63,12 @@ logout(){
   alert.present();
   
 }
+googleAnalytics(){
+  this.ga.startTrackerWithId('UA-130246723-1')
+    .then(() => {
+      console.log('Google analytics is ready now');
+      this.ga.trackView('setting');
+    })
+    .catch(e => console.log('Error starting GoogleAnalytics', e));
+  }
 }

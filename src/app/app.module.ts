@@ -13,14 +13,13 @@ import { EditListPage } from '../pages/edit-list/edit-list';
 import {AgencesPage} from '../pages/agences/agences';
 
 // MM-Pages ajouter  aussi dans la section plus bas declaration et entry compenent
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { Home2Page } from '../pages/home2/home2';
+
+
+
 import { Home3Page } from '../pages/home3/home3';
 import { ContentPage } from '../pages/content/content';
 import { TabsPage } from '../pages/tabs/tabs';
-import { TabtestPage } from '../pages/test/tabtest';
+
 import { DuaaPage } from '../pages/duaa/duaa';
 import { DuaalistPage } from '../pages/duaalist/duaalist';
 
@@ -42,7 +41,7 @@ import { DatabaseProvider } from '../providers/database/database';
 import { WpProvider } from '../providers/wp/wp';
 import { AgencesDataProvider } from '../providers/agences-data/agences-data';
 import { FIREBASE_CONFIG } from './app.firebase.config';
-import { Home4Page } from '../pages/home4/home4';
+
 import { QuizPage } from '../pages/quiz/quiz';
 import { QuizProvider } from '../providers/quiz/quiz';
 import { ResultPage } from '../pages/result/result';
@@ -51,7 +50,11 @@ import {Network} from '@ionic-native/network'
 import { ResetpwdPage } from '../pages/resetpwd/resetpwd';
 import { NetworkserviceProvider } from '../providers/networkservice/networkservice';
 import { SettingPage } from '../pages/setting/setting';
-
+import { UpdatetaskPage } from '../pages/updatetask/updatetask';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { OptionsPage } from '../pages/options/options';
+import { ZiyartPage } from '../pages/ziyart/ziyart';
+import { OmraPage } from '../pages/omra/omra';
 @NgModule({
   declarations: [
     MyApp,
@@ -59,23 +62,21 @@ import { SettingPage } from '../pages/setting/setting';
     LoginPage,
     TodolistPage,
     AjoutertaskPage,
+    UpdatetaskPage,
     SignupPage,
     ResetpwdPage,
     LogoutPage,
-    AboutPage,
     EditListPage,
-    ContactPage,
-    HomePage,
-    Home2Page,
     Home3Page,
-    Home4Page,
     AgencesPage,
     ContentPage,
     QuizPage,
     ResultPage,
-    TabtestPage,
+    OptionsPage,
     DuaaPage,
     DuaalistPage,
+    ZiyartPage,
+    OmraPage,
     SettingPage,
     TabsPage
   ],
@@ -97,20 +98,18 @@ import { SettingPage } from '../pages/setting/setting';
     LogoutPage,
     TodolistPage,
     AjoutertaskPage,
+    UpdatetaskPage,
     EditListPage,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    Home2Page,
     Home3Page,
-    Home4Page,
     ContentPage,
     QuizPage,
     ResultPage,
     AgencesPage,
-    TabtestPage,
+    OptionsPage,
     DuaaPage,
+    ZiyartPage,
     DuaalistPage,
+    OmraPage,
     SettingPage,
     TabsPage
   ],
@@ -119,6 +118,7 @@ import { SettingPage } from '../pages/setting/setting';
     HttpModule,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GoogleAnalytics,
     //LoginProvider,
     SQLitePorter,
     SQLite,

@@ -6,32 +6,69 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>{{pageTitle}}</ion-title>
-      </ion-navbar>
+  <ion-navbar>
+    <ion-title>{{pageTitle}}</ion-title>
+
+  </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding dir="rtl">
+<ion-content  class="masters" padding dir="rtl">
 
-      
-  <ion-slides #pageSlider (ionSlideDidChange)="onSlideMoved()" pager="true" dir="rtl">
-    
+  <ion-slides style="height: auto" #pageSlider centeredSlides="false"   (ionSlideDidChange)="onSlideMoved()" pager="false" dir="rtl">
+
     <ion-slide *ngFor="let post of posts">
-          <p [innerHTML]="post.excerpt.rendered"></p>
-         
-          <button *ngIf=lastSlide ion-button block class=" marginTop" (click)="startQuiz()">quiz</button>
-          <button *ngIf=!lastSlide ion-button block class=" marginTop" (click)="moveNext()">next</button>
+      <!-- 
+        <button ion-button clear outline icon-only class=" marginTop" (click)="movePrev()">
+            <ion-icon name="arrow-dropleft"></ion-icon>
+          </button>
+          <button ion-button  clear  outline icon-only  class=" marginTop" (click)="moveNext()">
+               <ion-icon name="arrow-dropright"></ion-icon>
+             </button>
+          -->
           
-          
-  
-        </ion-slide>
-               
-      </ion-slides>
+<ion-card  class = "newcard"  > 
+    <ion-card-content>
+  <p style="text-align: right; font-size: large;" [innerHTML]="post.content.rendered"></p>
+  </ion-card-content>
+</ion-card>
       
+      <button *ngIf="lastSlide || numberPosts==1" ion-button block class=" marginTop" color="favorite" (click)="startQuiz()">أسئلة</button>
+      <!--
+          <button *ngIf=!lastSlide ion-button  class=" marginTop" (click)="moveNext()">next</button>
+          <button *ngIf=!lastSlide ion-button  class=" marginTop" (click)="moveNext()">prev</button>
+         -->
+         <!-- old style en bas de page-->
+      <button *ngIf="!lastSlide && !firstSlide" ion-button icon-start class="marginTop" color="favorite" (click)="movePrev()">
+        <ion-icon name="arrow-dropleft"></ion-icon>
+        السابق
+      </button>
+
+      <button *ngIf="!lastSlide && numberPosts!=1" ion-button icon-end class=" marginTop" color="favorite" (click)="moveNext()">
+        التالي
+        <ion-icon name="arrow-dropright"></ion-icon>
+
+      </button>
    
-      <!-- <ion-card *ngFor="let post of posts">
+     <!--  flaoting
+      <button *ngIf="!lastSlide && !firstSlide" float-right  class="backBtn" (click)="movePrev()">
+          <ion-icon name="arrow-dropleft"></ion-icon>
+         
+        </button>
+  
+        <button *ngIf="!lastSlide"  float-left  class="nextBtn" (click)="moveNext()">
+        
+          <ion-icon name="arrow-dropright"></ion-icon>
+  
+        </button>
+         -->
+    </ion-slide>
+</ion-slides>
+
+
+
+  <!-- <ion-card *ngFor="let post of posts">
         <ion-card-content>
           <p [innerHTML]="post.excerpt.rendered"></p>
         </ion-card-content>

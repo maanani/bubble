@@ -1,4 +1,5 @@
-page-home4 {
+page-omra {
+
     overflow: scroll;
        .wide-as-needed {
          overflow: scroll;
@@ -10,14 +11,21 @@ page-home4 {
      
        ion-card {
          width: 200px ;
-         height: 130px;
-        display: inline-block;
+         height: auto;
+         //display: inline-block;
      }
      .text-on-bottom > .button-inner {
        flex-direction: column;
      }
      .newcard{
-       background: color($colors, vimeo);
+       background: color($colors, favorite);
+       margin: auto ;
+       border-radius: 10px;
+       margin-bottom: 10px;
+       margin-left: 10px
+     }
+     .donecard{
+       background: color($colors, done);
        margin: auto ;
        border-radius: 10px;
        margin-bottom: 10px;
@@ -38,16 +46,18 @@ page-home4 {
      }
      .action{
    
-       margin-left: auto;
-       margin-right: auto;
+      // margin-left: auto;
+       //margin-right: auto;
      
       // height: 80px;
       
      }
      .item{
+      // background: color($colors, light);
        font-size: 10px ;
        white-space:wrap;
-       height:10px;
+       height:20px;
+       background: color($colors, gris);
      }
      p {
        //width: 200px; /* à modifier selon vos besoins */

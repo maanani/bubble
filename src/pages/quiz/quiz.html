@@ -8,37 +8,52 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-buttons left>
-            <button ion-button icon-only>
-                <ion-icon name='menu'></ion-icon>
-            </button>
-        </ion-buttons>
+
         <ion-title>اختبر معلوماتك</ion-title>
-        <ion-buttons end>
-            <button ion-button icon-only (click)="openModal()">
-                <ion-icon name="settings"></ion-icon>
-            </button>
-        </ion-buttons>
+       
     </ion-navbar>
 </ion-header>
 <ion-content padding dir="rtl">
+    <ion-card *ngFor="let quiz of allQuiz" class="quizcard">
+        <ion-card-header text-wrap> <strong>{{quiz.question}}</strong> </ion-card-header>
+        <ion-card-content>
+            <ion-list *ngIf="quiz.type===0 && !quiz.answered" radio-group >
 
-    <ion-list *ngIf="quiz.type===0"radio-group>
-        {{quiz.question}}
+                <ion-item *ngFor="let resp of quiz.responses" color="gris">
+                    <ion-label text-wrap>{{resp.answer}} </ion-label>
+                    <ion-radio (click)="select(resp,quiz)" color="favorite" ></ion-radio>
+                </ion-item>
+                <button ion-button block color="favorite" (click)="verify(quiz)">تحقق من الجواب</button>
+            </ion-list>
+            <ion-list *ngIf="quiz.type===0 && quiz.answered" radio-group>
 
-        <ion-item *ngFor="let resp of quiz.responses" >  
-          <ion-label [color]= "secondary">{{resp.answer}}</ion-label>
-          <ion-radio (click)="select(resp)"></ion-radio>
-        </ion-item>
-        <button ion-button block class="marginTop" (click)="verify()">تحقق من الجواب</button>
-      </ion-list>
-      <ion-list *ngIf="quiz.type===1">
-          {{quiz.question}}
-         
-          <ion-item *ngFor="let resp of quiz.responses" >  
-            <ion-label>{{resp.answer}}</ion-label>
-            <ion-checkbox (ionChange)="addselect(resp)" [(ngModel)]= resp.checked></ion-checkbox>
-          </ion-item>
-          <button ion-button block class="marginTop" (click)="verifyMulti()">تحقق من الجواب</button>
-        </ion-list>
+                <ion-item *ngFor="let resp of quiz.responses" color="gris">
+                    <ion-label text-wrap color="secondary">{{resp.answer}}</ion-label>
+                    <ion-radio [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" color='secondary'></ion-radio>
+
+                </ion-item>
+                <button ion-button block  color="favorite" [disabled]="quiz.answered" (click)="verify(quiz)">تحقق من
+                    الجواب</button>
+            </ion-list>
+            <ion-list *ngIf="quiz.type===1 && !quiz.answered">
+
+                <ion-item *ngFor="let resp of quiz.responses" color="gris">
+                    <ion-label text-wrap>{{resp.answer}}</ion-label>
+                    <ion-checkbox (ionChange)="addselectquiz(resp,quiz)" [(ngModel)]=resp.checked color="favorite" ></ion-checkbox>
+                </ion-item>
+
+                <button ion-button block class="marginTop" color="favorite" (click)="verifyMulti(quiz)">تحقق من الجواب</button>
+            </ion-list>
+            <ion-list *ngIf="quiz.type===1 && quiz.answered" radio-group>
+
+                <ion-item *ngFor="let resp of quiz.responses" color="gris">
+                    <ion-label text-wrap color='secondary'>{{resp.answer}}</ion-label>
+                    <ion-checkbox [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" color='secondary'></ion-checkbox>
+                </ion-item>
+                <button ion-button block class="marginTop" color="favorite"  [disabled]="quiz.answered" (click)="verifyMulti(quiz)">تحقق من
+                    الجواب</button>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
 </ion-content>

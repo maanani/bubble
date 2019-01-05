@@ -17,7 +17,7 @@ page-home3 {
     flex-direction: column;
   }
   .newcard{
-    background: color($colors, vimeo);
+    background: color($colors, favorite);
     margin: auto ;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -45,8 +45,8 @@ page-home3 {
   }
   .action{
 
-    margin-left: auto;
-    margin-right: auto;
+   // margin-left: auto;
+    //margin-right: auto;
   
    // height: 80px;
    
@@ -56,6 +56,7 @@ page-home3 {
     font-size: 10px ;
     white-space:wrap;
     height:20px;
+    background: color($colors, gris);
   }
   p {
     //width: 200px; /* à modifier selon vos besoins */

@@ -1,17 +1,9 @@
 <ion-header>
   <ion-navbar>
-    <ion-buttons left>
-      <button ion-button icon-only>
-        <ion-icon name='menu'></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title>الحج و العمرة</ion-title>
+  
+    <ion-title> الحج </ion-title>
 
-    <ion-buttons end>
-      <button ion-button icon-only (click)="openModal()">
-        <ion-icon name="settings"></ion-icon>
-      </button>
-    </ion-buttons>
+   
   </ion-navbar>
 </ion-header>
 
@@ -24,20 +16,22 @@
         <h2> {{course.name}} </h2>
       </ion-card-content>
       <ion-item> 
+        <ion-grid>
         <ion-row > 
           <ion-col class="action">
             <button ion-button icon-left color="done" clear (click)="loadcontent(course)">
                 <ion-icon name="ios-book"></ion-icon>
-                <div>محتوى</div>   
+                <p>محتوى</p>   
             </button>
           </ion-col>
           <ion-col class="action">
             <button ion-button icon-left color="done" clear (click)="loadquiz(course)">
                 <ion-icon name="md-checkmark-circle-outline"></ion-icon>
-                <div>اختبر معلوماتك</div> 
+                <p>أسئلة</p> 
             </button>
           </ion-col>
         </ion-row>
+      </ion-grid>
       </ion-item>
     </ion-card>       
     </ion-list>

@@ -8,39 +8,33 @@
   <ion-header>
 
       <ion-navbar>
-          <ion-buttons left>
-              <button ion-button icon-only>
-                  <ion-icon name='menu'></ion-icon>
-              </button>
-          </ion-buttons>
+    
           <ion-title>إجابة</ion-title>
-          <ion-buttons end>
-              <button ion-button icon-only (click)="openModal()">
-                  <ion-icon name="settings"></ion-icon>
-              </button>
-          </ion-buttons>
+          
       </ion-navbar>
   </ion-header>
   
   <ion-content padding dir="rtl">
-  
+    <ion-card class= rescard>
+    <ion-card-header text-wrap><strong>{{quiz.question}} </strong></ion-card-header>
+    <ion-card-content>
       <ion-list *ngIf="quiz.type===0" radio-group>
-          {{quiz.question}}
+          
   
-          <ion-item *ngFor="let resp of quiz.responses" >  
+          <ion-item *ngFor="let resp of quiz.responses"  color="gris">  
             <ion-label [color]="answeredCorrect? 'secondary' : 'primary'">{{resp.answer}}</ion-label>
-            <ion-radio (click)="select(resp)" [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" [color]="answeredCorrect? 'secondary' : 'primary'"></ion-radio>
+            <ion-radio [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" [color]="answeredCorrect? 'secondary' : 'primary'"></ion-radio>
           </ion-item>
-          <button ion-button block class="marginTop" (click)="nextCourse()">فهمت</button>
+          <button ion-button block class="marginTop" color="favorite" (click)="nextCourse()">فهمت</button>
         </ion-list>
         <ion-list *ngIf="quiz.type===1">
-            {{quiz.question}}
-           
-            <ion-item *ngFor="let resp of quiz.responses" >  
+            <ion-item *ngFor="let resp of quiz.responses" color="gris">  
                 <ion-label [color]="answeredCorrect? 'secondary' : 'primary'">{{resp.answer}}</ion-label>
               <ion-checkbox  [disabled]="!resp.iscorrect" [checked]="resp.iscorrect" [color]="answeredCorrect? 'secondary' : 'primary'"></ion-checkbox>
             </ion-item>
-            <button ion-button block class="marginTop" (click)="nextCourse()"> فهمت</button>
+            <button ion-button block class="marginTop" color="favorite" (click)="nextCourse()"> فهمت</button>
           </ion-list>
+        </ion-card-content>
+    </ion-card>
   </ion-content>
   

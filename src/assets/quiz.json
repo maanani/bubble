@@ -1,53 +1,869 @@
-[{
-      "id": 1,
-      "idContent": 635659554,
-      "type": 1,
-      "question": "this is the question 1 ?",
-      "responses": [
-       {
-          "id": "rep1",
-        "answer": "tests 1 answer",
-          "iscorrect": true
-        },
-        { "id": "rep2",
-          "answer": "tests 2 answer",
-          "iscorrect": false
-        },
-       { "id": "rep3",
-          "answer": "tests 3 answer",
-          "iscorrect": true
-        },
-        { "id": "rep4",
-          "answer": "tests 4 answer",
-          "iscorrect": false
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "idContent": 2,
-      "type": 0,
-      "question": "this is the question 2?",
-      "responses": [
-        {
-          "id": "rep1", 
-          "answer": "tests 1 answer",
-           "iscorrect": true
-         },
-         {
-          "id": "rep2",
-           "answer": "tests 2 answer",
-           "iscorrect": false
-         },
-        {
-          "id": "rep3",
-           "answer": "tests 3 answer",
-           "iscorrect": true
-         },
-         {
-          "id": "rep4",
-           "answer": "tests 4 answer",
-           "iscorrect": false
-         }
-       ]
-    }]
+[
+	{
+		"id": 1,
+		"idContent": 667096464,
+		"type": 0,
+		"question": "هل الحج؟",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "سنة",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "سنة مؤكدة",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "فرض",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "مستحب",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 2,
+		"idContent": 667096464,
+		"type": 1,
+		"question": "يلزم الهدي للحاج ؟",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "القارن",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "المتمتع",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "المفرد",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 3,
+		"idContent": 667096464,
+		"type": 1,
+		"question": "اختر الجمل الصحيحة",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "الإفراد: و هو نية الحج فقط",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "الحج ركن من أركان الإسلام",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "يمكن للمرأة الحج دون محرم",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 4,
+    "idContent": 667096474,
+    "idOmra":667946729,
+		"type": 0,
+		"question": "هل يجوز الطواف بلا وضوء؟",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "لا",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "نعم",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 5,
+		"idContent": 667096474,
+		"type": 1,
+		"question": "اختر الجمل الصحيحة",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": " الوقوف بعرفة يكون يوم التاسع من ذي الحجة",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "يكون  الوقوف في كل عرفات وليس فوق جبل عرفة فحسب",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "يغادر الحاج عرفة قبل غروب الشمس",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "الوقوف بعرفة ركن",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 7,
+		"idContent": 667096474,
+		"type": 0,
+		"question": " هذه المناسك من اركان الحج إلا  ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "الوقوف بعرفة ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "الحلق",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "السعي بين الصفا والمروة",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "طواف الوداع",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 8,
+		"idContent": 667096474,
+		"type": 0,
+		"question": " رمي الجمار عند كل جمرة يكون ب؟  ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "8 حصيات ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "7 حصيات",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "14 حصيات",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "9 حصيات",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 9,
+    "idContent": 667096478,
+    "idOmra":667945161,
+		"type": 0,
+		"question": " ما هو ميقات أهل المدينة؟  ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "آبار علي ",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "رابغ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "بمكة",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": " يلملم",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 10,
+    "idContent": 667096478,
+		"type": 0,
+		"question": " في أيام التشريق يكون المبيت واجبا ب؟  ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "بمزدلفة ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "بمنى",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "بعرفة",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": " بمكة",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 11,
+    "idContent": 667096478,
+		"type": 0,
+		"question": "رمي الجمرة العقبة يكون",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "الجمرة الصغرى ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "الجمرة الوسطى ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "الجمرة الكبرى ",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 12,
+    "idContent": 667096484,
+    "idOmra":667945161,
+		"type": 1,
+		"question": "من محرمات الإحرام",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "تغطية الرأس ",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "التطيب ",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "لبس المخيط",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "تبديل الإحرام للضرورة ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep5",
+				"answer": "تغطية الوجه ",
+				"iscorrect": true
+			},
+			{
+				"id": "rep6",
+				"answer": "استعمال المضلة",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 13,
+    "idContent": 667096488,
+    "idOmra":667945175,
+		"type": 0,
+		"question": "عند إقامت الصلاة أثناء الطواف ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "تصلي و تعيد الشوط",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "تصلي و تعيد الطواف من الاول",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "تصلي و تكمل من حيث توقفت",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "تكمل الطواف ولا تصلي مع الجماعة",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 14,
+    "idContent": 667096488,
+    "idOmra":667945175,
+		"type": 0,
+		"question": "عدد أشواط الطواف",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "8",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "5",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "7",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "9",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 15,
+    "idContent": 667096488,
+    "idOmra":667945175,
+		"type": 0,
+		"question": "إذا أحدث الحاج أثناء الطواف",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "يكمل الطواف",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "يذهب للوضوء ويكمل حيث توقف",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "يذهب للوضوء ويعيد الشوط ويكمل",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "يذهب للوضوء ويعيد الطواف من الأول",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 16,
+    "idContent": 667096488,
+    "idOmra":667945175,
+		"type": 1,
+		"question": "يكون الا ضطباع في ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "الأشواط السبع",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "الأشواط الثلاثة الأولى",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": " طواف العمرة والقدوم",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "طواف الوداع",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 17,
+    "idContent": 667096491,
+    "idOmra":667946729,
+		"type": 0,
+		"question": "السعي ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "7 أشواط",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "9 أشواط",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": " 5 أشواط",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "3 أشواط",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 18,
+		"idContent": 667096491,
+    "idOmra":667946729,
+    "type": 0,
+		"question": "يهرول بين الميلين الاخضرين ",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "الرجال",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "النساء",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": " النساء و الرجال",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 19,
+    "idContent": 667096491,
+    "idOmra":667946729,
+		"type": 0,
+		"question": "إذا أحدث الحاج أثناء السعي",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "يكمل السعي",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "يذهب للوضوء ويكمل حيث توقف",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "يذهب للوضوء ويعيد الشوط ويكمل",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "يذهب للوضوء ويعيد السعي من الأول",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 20,
+		"idContent": 667096492,
+		"type": 1,
+		"question": "إذا حاضت المرأة أو نفست و هي محرمة جاز لها",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": " السعي",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "الوقوف بعرفة",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "الطواف",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "رمي الجمار",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 21,
+		"idContent": 667096492,
+		"type": 1,
+		"question": "إختر الجمل الصحيحة",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": " المرأة  إحرامها هو لباسها دون زينة أو تبرج",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "المرأة الحائض تقف بعرفة",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "المرأة  ترفع صوتها بالتلبية كالرجال",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "المرأة تهرول في السعي",
+				"iscorrect": false
+			},
+			{
+				"id": "rep5",
+				"answer": "المرأة الحائض يزلمها جزاء إذا تركت طواف الوداع",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 22,
+		"idContent": 667096494,
+		"type": 0,
+		"question": "يوم التروية هو",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "السابع من ذي الحجة",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "الثامن من ذي الحجة",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": " التاسع من ذي الحجة",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 23,
+		"idContent": 667096494,
+		"type": 1,
+		"question": "إختر الجمل الصحيحة",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "يوم التروية يتوجه الحاج الى منى ",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "تصلى المغرب و العشاء جمعا في منى",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "المرأة الحائض لا تذهب الى منى",
+				"iscorrect": false
+			},
+			{
+				"id": "rep4",
+				"answer": "تصلى الصلوات قصرا  فى منى",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 24,
+		"idContent": 667096496,
+		"type": 1,
+		"question": "إختر الجمل الصحيحة",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "يستحب للحاج صوم يوم عرفة ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "يوم عرفة تصلى الظهر و العصر جمع تأخير",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "يوم عرفة تصلى الظهر و العصر جمع تقديم",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "يغادر الحاج عرفة قبل غروب الشمس",
+				"iscorrect": false
+			},
+			{
+				"id": "rep5",
+				"answer": "المرأة الحائض تقف بعرفة",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 25,
+		"idContent": 667096496,
+		"type": 0,
+		"question": "يوم عرفة يصلي الحاج المغرب و العشاء",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "بعرفة جمعا ",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "حتى يصل الى منى",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "بمزدلفة جمعا و قصرا",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "بمزدلفة في وقتهما",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 26,
+		"idContent": 667096407,
+		"type": 1,
+		"question": "أعمال يوم النحر",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "رمي جمرة العقبة الصغرى",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "رمي جمرة العقبة الكبرى",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "الحلق",
+				"iscorrect": true
+			},
+			{
+				"id": "rep4",
+				"answer": "طواف الافاضة دون سعي",
+				"iscorrect": false
+			},
+			{
+				"id": "rep5",
+				"answer": "طواف الافاضة مع السعي",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 27,
+		"idContent": 667096407,
+		"type": 0,
+		"question": "يتحلل الحاج التحلل الاصغر",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "حتى يؤ دي الطواف الافاضة",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "اذا أدى عملين من أعمال يوم النحر",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "اذا أدى  3 اعمال من أعمال يوم النحر",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 271,
+		"idContent": 667096407,
+		"type": 0,
+		"question": "يمكن تقديم السعي عن طواف الافاضة",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "صحيح",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "لا",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 28,
+		"idContent": 667096409,
+		"type": 1,
+		"question": "يكون الدعاء بعد",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "رمي الجمرة الصغرى",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "رمي الجمرة المتوسطة",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "رمي الجمرة الكبرى",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 29,
+		"idContent": 667096409,
+		"type": 0,
+		"question": "في ايام التشريق",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "ييجب المبيت على الاقل اليوم 11 و12",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "يجب المبيت في منى الايام كلها",
+				"iscorrect": false
+			},
+			{
+				"id": "rep3",
+				"answer": "يمكن المبيت في مكة",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 30,
+		"idContent": 667096409,
+		"type": 0,
+		"question": "اذا غربت شمس  12 ذوالحجة والحاج بمنى",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "يبيت و يذهب الى مكة في الصباح",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "ييبيت و يرمي الجمرات في الغد",
+				"iscorrect": true
+			},
+			{
+				"id": "rep3",
+				"answer": "يسرع لينفر قبل العشاء",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 31,
+    "idContent": 667096540,
+    "idOmra":667947260,
+		"type": 0,
+		"question": "يتبع طواف الوداع سعي",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "صحيح",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "لا",
+				"iscorrect": true
+			}
+		]
+	},
+	{
+		"id": 32,
+    "idContent": 667096540,
+    "idOmra":667947260,
+		"type": 0,
+		"question": "يصلي ركعتي طواف الوداع",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "صحيح",
+				"iscorrect": true
+			},
+			{
+				"id": "rep2",
+				"answer": "لا",
+				"iscorrect": false
+			}
+		]
+	},
+	{
+		"id": 33,
+    "idContent": 667096540,
+    "idOmra":667947260,
+		"type": 0,
+		"question": "بعد طواف الوداع",
+		"responses": [
+			{
+				"id": "rep1",
+				"answer": "يكمن الذهاب للتسوق",
+				"iscorrect": false
+			},
+			{
+				"id": "rep2",
+				"answer": "يستعد للسفرمباشرلمغادرة مكة",
+				"iscorrect": true
+			}
+		]
+	}
+]

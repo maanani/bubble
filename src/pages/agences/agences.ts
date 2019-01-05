@@ -4,6 +4,8 @@ import { AgencesDataProvider } from '../../providers/agences-data/agences-data';
 import 'rxjs/add/operator/debounceTime';
 import { FormControl } from '@angular/forms';
 import { CallNumber } from '@ionic-native/call-number';
+import { SettingPage } from '../setting/setting';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 /**
  * Generated class for the AgencesPage page.
  *
@@ -20,9 +22,13 @@ export class AgencesPage {
   agences: any;
   result: any;
   searchTerm: string = '';
+  default:string='...'
+  showCancelText:string='إلغاء'
+  showCancelButton:boolean= false;
   searchControl: FormControl;
   searching: any = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public agenceData: AgencesDataProvider, private alertCtrl: AlertController, private CallNumber: CallNumber) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public agenceData: AgencesDataProvider, private alertCtrl: AlertController, private CallNumber: CallNumber,public ga:GoogleAnalytics) {
+    this.googleAnalytics();
     this.searchControl = new FormControl();
   }
 
@@ -49,7 +55,7 @@ export class AgencesPage {
     console.log(JSON.stringify(this.agences));
 
     this.result = this.agences.filter((agence) => {
-      return agence.nom.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+      return agence.nom.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 || agence.ville.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
     });
 
 
@@ -66,7 +72,7 @@ export class AgencesPage {
   presentConfirm(agence) {
     let alert = this.alertCtrl.create({
       title: agence.nom+' ('+agence.ville+')',
-      message: 'voulez-vous contacter cette agence au :' + agence.telephone + '?',
+      message: "Contactez cette agence au : " +"<br>"+agence.telephone ,
       buttons: [
         {
           text: 'Cancel',
@@ -86,4 +92,16 @@ export class AgencesPage {
     });
     alert.present();
   }
+  openModal(){
+
+    this.navCtrl.push(SettingPage,{});
+  }
+  googleAnalytics(){
+    this.ga.startTrackerWithId('UA-130246723-1')
+      .then(() => {
+        console.log('Google analytics is ready now');
+        this.ga.trackView('agences');
+      })
+      .catch(e => console.log('Error starting GoogleAnalytics', e));
+    }
 }

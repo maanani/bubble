@@ -108,13 +108,35 @@ export class DatabaseProvider {
       return [];
     });
   }
-
+getTask(id) {
+ 
+  let tache={ idTodo:0, title:"", description:"", categorieId:0,isDone:false } ;
+  console.log("initial task"+tache);
+ this.database.executeSql("SELECT * FROM todolistes WHERE idTodo==?" , [id]).then((data) => {
+  
+  if(data.rows.length > 0) {
+    
+    tache.idTodo = data.rows.item(0).idTodo;
+    tache.title = data.rows.item(0).title;
+    tache.categorieId = data.rows.item(0).categorieId;
+    tache.description = data.rows.item(0).description;
+    tache.isDone = data.rows.item(0).isDone;
+    return tache;
+  } 
+    }).catch(e => {
+      console.log(e);})
+   return tache;
+  }
 deleteTask(id){
   console.log(" delating ... id :"+id);
   return this.database.executeSql ("DELETE FROM todolistes where idTodo==?",[id]).then((data)=>{
     console.log('deleted');
     return data });
 
+}
+updateTask(task){
+
+  return this.database.executeSql("UPDATE todolistes set title=?, categorieId=?, description=? WHERE idTodo==?", [task.title,task.categorieId,task.description,task.idTodo]).then(data=>{ return data});
 }
   updateisDone(task){
   console.log(" item to update "+task.id+"and is" +task.isDone);

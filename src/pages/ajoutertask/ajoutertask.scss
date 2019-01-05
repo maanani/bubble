@@ -1,8 +1,29 @@
 page-ajoutertask {
     
-
 }
 .ion-select{
-    max-width: 70% !important;
-    text-align: center;
+    //max-width: 100% !important;
+    //margin-left: 100%;
+    
+    
 }
+
+  .alert-title {
+    text-align: center;
+    
+ }
+ .alert-radio-label {
+    text-align: right;
+  
+ }
+ .alert-radio-inner{
+  position:absolute;
+  margin-block-start: 900px;
+ }
+ .alert-radio-icon{
+  position:relative;
+ // margin-block-start: 900px
+ }
+ // .alert-radio-label {
+ //   white-space: normal!important;
+ // }

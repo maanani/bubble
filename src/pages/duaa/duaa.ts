@@ -8,6 +8,7 @@ import { database } from 'firebase';
 import { DatabaseProvider } from '../../providers/database/database';
 import { withLatestFrom } from 'rxjs/operator/withLatestFrom';
 import { SettingPage } from '../setting/setting';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 /**
  * Generated class for the ContentPage page.
@@ -34,7 +35,8 @@ export class DuaaPage {
   currIndex: any;
   @ViewChild('pageSlider') viewer: Slides;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, public wpProvider: WpProvider, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public wpProvider: WpProvider, public loadingCtrl: LoadingController,public ga:GoogleAnalytics) {
+    this.googleAnalytics();
     let idContent = this.ID_CONTENT_DUAA;
     this.posts=this.navParams.get('duaalist');
     this.idToGo=this.navParams.get('idtogo');
@@ -66,7 +68,8 @@ export class DuaaPage {
     let idContent = this.ID_CONTENT_DUAA;
     
     if (!(this.posts.length > 0)) {
-       let loading = this.loadingCtrl.create();
+      let loading = this.loadingCtrl.create({spinner:'bubbles',duration:3000});
+
          loading.present();
          this.goToSlide(this.idToGo);
          loading.dismiss();}
@@ -143,4 +146,15 @@ export class DuaaPage {
   openModal(){
     this.navCtrl.push(SettingPage,{});
   }
+  duaalist(){
+    this.navCtrl.popToRoot();
+  }
+  googleAnalytics(){
+    this.ga.startTrackerWithId('UA-130246723-1')
+      .then(() => {
+        console.log('Google analytics is ready now');
+        this.ga.trackView('duaa');
+      })
+      .catch(e => console.log('Error starting GoogleAnalytics', e));
+    }
 }

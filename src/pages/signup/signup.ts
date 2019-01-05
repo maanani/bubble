@@ -5,6 +5,7 @@ import { AngularFireAuth} from  "angularfire2/auth";
 import { User } from '../../models/user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { regexValidators } from '../validators/validator';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 /**
  * Generated class for the SignupPage page.
  *
@@ -20,7 +21,8 @@ import { regexValidators } from '../validators/validator';
 export class SignupPage {
   user= {} as User;
   signupForm: FormGroup;
-  constructor( private angufireAuth:AngularFireAuth ,public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController ,public formBuilder:FormBuilder) {
+  constructor( private angufireAuth:AngularFireAuth ,public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController ,public formBuilder:FormBuilder,public ga:GoogleAnalytics) {
+    this.googleAnalytics();
     this.signupForm = this.formBuilder.group({
 
       email: [
@@ -109,5 +111,12 @@ presentConfirm() {
 }
     // verfication et inscription
     //this.navCtrl.push(TabsPage, {}, { animate: true });
-  
+    googleAnalytics(){
+      this.ga.startTrackerWithId('UA-130246723-1')
+        .then(() => {
+          console.log('Google analytics is ready now');
+          this.ga.trackView('signup');
+        })
+        .catch(e => console.log('Error starting GoogleAnalytics', e));
+      } 
 }

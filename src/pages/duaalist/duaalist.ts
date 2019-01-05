@@ -5,6 +5,7 @@ import { FormControl } from '@angular/forms';
 import { WpProvider } from '../../providers/wp/wp';
 import { DuaaPage } from '../duaa/duaa';
 import { SettingPage } from '../setting/setting';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 /**
  * Generated class for the DuaalistPage page.
@@ -31,7 +32,8 @@ searching: any= false;
 ID_CONTENT_DUAA = 8577390;
 
   //duaa: { id: string; nom: string; Adresse: string; Tel: string; email: string; }[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public wpProvider:WpProvider,public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public wpProvider:WpProvider,public loadingCtrl: LoadingController,public ga:GoogleAnalytics) {
+    this.googleAnalytics();
 this.searchControl= new FormControl();
   }
 
@@ -63,24 +65,28 @@ this.searchControl= new FormControl();
     //this.posts = this.wpProvider.getPosts(this.ID_CONTENT_DUAA);
   }
   ionViewWillEnter() {
-    let idContent = this.ID_CONTENT_DUAA;
+    //let idContent = this.ID_CONTENT_DUAA;
     //this.morePagesAvailable = true;
 
     //if we are browsing a category
     // this.categoryId = this.navParams.get('id');
     // this.categoryTitle = this.navParams.get('title');
 
-    this.getContent(idContent);
+    this.getContent();
   }
-  private getContent(idContent: number) {
+  private getContent() {
     if (!(this.posts.length > 0)) {
-      let loading = this.loadingCtrl.create();
+      let loading = this.loadingCtrl.create({spinner:'bubbles',duration:3000});
+
       let i = 0;
       loading.present();
-      this.wpProvider.getPosts(idContent)
+      this.wpProvider.getDoua()
         .subscribe(data => {
           for (let post of data) {
-            post.excerpt.rendered = post.excerpt.rendered.split('<a')[0] + "</p>";
+           // post.excerpt.rendered = post.excerpt.rendered.split('<a')[0] + "</p>";
+           
+           //post.content.rendered = post.content.rendered;
+            post.content.rendered=post.content.rendered;
             post.title.rendered = post.title.rendered.split('<a')[0] + "</p>";
             post.favorite = false;
             post.idSlide = i++;
@@ -105,5 +111,13 @@ this.searchControl= new FormControl();
 
     this.navCtrl.push(SettingPage,{});
   }
+  googleAnalytics(){
+    this.ga.startTrackerWithId('UA-130246723-1')
+      .then(() => {
+        console.log('Google analytics is ready now');
+        this.ga.trackView('duaaList');
+      })
+      .catch(e => console.log('Error starting GoogleAnalytics', e));
+    }
 }
 

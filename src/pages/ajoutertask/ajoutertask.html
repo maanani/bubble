@@ -14,10 +14,10 @@
 
 </ion-header>
 
-<ion-content padding dir="rtl">
+<ion-content   padding>
   <ion-fab top left>
-    <button ion-fab mini (click)="dismiss()">
-      <ion-icon name="close-circle"></ion-icon>
+    <button ion-fab  color="favorite" mini (click)="dismiss()">
+      <ion-icon name="close-circle" color="light"></ion-icon>
     </button>
   </ion-fab>
 
@@ -31,12 +31,14 @@
       <ion-input name="desc" [(ngModel)]="description"></ion-input>
     </ion-item>
     <ion-item dir="rtl">
-        <ion-label dir="rtl">تصنيف</ion-label>
-        <ion-select dir="rtl">
-          <ion-option  right dir="rtl"  *ngFor="let categorie of categories" [value]="categorie.idCategorie" (ionSelect)="select(categorie.idCategorie)">{{categorie.nomCategorie}}</ion-option>
+        <ion-label dir="rtl">تصنيف </ion-label>
+        <ion-select interface="popover">
+        <ion-option dir="rtl" *ngFor="let categorie of categories" [value]="categorie.idCategorie" (ionSelect)="select(categorie.idCategorie)">{{categorie.nomCategorie}}</ion-option>  
         </ion-select>
       </ion-item>
 
   </ion-list>
+ 
+  <button ion-button color="favorite" (click)="add()">أضف</button>
 
-  <button ion-button round (click)="add()">أضف</button>
+  </ion-content>

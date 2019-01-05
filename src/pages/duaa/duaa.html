@@ -8,33 +8,40 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-buttons left>
-            <button ion-button icon-only>
-                <ion-icon name='menu'></ion-icon>
-            </button>
-        </ion-buttons>
+
         <ion-title>دعاء</ion-title>
-        <ion-buttons end>
-            <button ion-button icon-only (click)="openModal()">
-                <ion-icon name="settings"></ion-icon>
-            </button>
-        </ion-buttons>
+        
+  
     </ion-navbar>
+    <ion-toolbar  color="light" no-border-top>
+        <ion-title></ion-title>
+        <ion-buttons right>
+              <button ion-button    clear color="favorite" outline icon-only class="marginTop" (click)="moveback()"><ion-icon name="arrow-dropleft-circle"></ion-icon></button>
+            </ion-buttons>    
+              <ion-buttons left>
+              <button ion-button     clear color="favorite"  outline icon-only  class="marginTop" (click)="moveNext()"><ion-icon name="arrow-dropright-circle"></ion-icon></button>
+       </ion-buttons>
+    </ion-toolbar>   
 </ion-header>
 <ion-content padding id="DuaaPage" background="favorite" dir="rtl" >
    
-  <ion-slides #pageSlider (ionSlideDidChange)="onSlideMoved()" pager="true" dir="rtl">
-    <ion-slide class="swiper-slide" *ngFor="let post of posts">
+  <ion-slides #pageSlider (ionSlideDidChange)="onSlideMoved()" pager="false" dir="rtl">
+    <ion-slide  *ngFor="let post of posts">
 
+        <h1 [innerHTML]="post.title.rendered"></h1>
+<ion-card class="card">
 
+      
+<ion-card-content text-warp> <span style="font-size:large;" ><strong [innerHTML]="post.content.rendered"></strong></span></ion-card-content>
+      
 
-      <h1 [innerHTML]="post.title.rendered"></h1>
-
-      <p [innerHTML]="post.excerpt.rendered"></p>
-
-
+    </ion-card>
       <!-- <ion-row>
         <ion-col>
+         
+          <ion-card-content text-warp> <p style="font-size:large" ><strong [innerHTML]="post.excerpt.rendered" ></strong></p></ion-card-content>
+ 
+
           <button ion-button class="action-button" icon-star clear [hidden]="post.favorite" (click)="addtoFavorite(post)">
             <ion-icon name="ios-star-outline"></ion-icon>
           </button>
@@ -52,14 +59,14 @@
 
 
       <!-- <button *ngIf=lastSlide ion-button block round   (click)="startQuiz()">quiz</button> -->
-      <ion-row >
+      <!-- <ion-row >
           <ion-col>
-            <button ion-button  clear  outline icon-only class="marginTop" (click)="moveback()"><ion-icon name="ios-arrow-dropleft"></ion-icon></button>
+            <button ion-button  clear color="secondary" outline icon-only class="marginTop" (click)="moveback()"><ion-icon name="ios-arrow-dropleft"></ion-icon></button>
           </ion-col>
           <ion-col>
-            <button ion-button  clear  outline icon-only  class="marginTop" (click)="moveNext()"><ion-icon name="ios-arrow-dropright"></ion-icon></button>
+            <button ion-button  clear color="secondary"  outline icon-only  class="marginTop" (click)="moveNext()"><ion-icon name="ios-arrow-dropright"></ion-icon></button>
           </ion-col>
-        </ion-row>
+        </ion-row> -->
       <!-- <button *ngIf=!lastSlide ion-button block class=" marginTop" (click)="moveNext()">next</button> -->
     </ion-slide>
 

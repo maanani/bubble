@@ -86,8 +86,15 @@
 
 /*.flaticon-medina-sherif:before { content: "\f10f"; }*/
 .flaticon-mosque-domes:before { content: "\f110"; }
-.flaticon-muhammad-word:before { content: "\f111"; }
-.flaticon-muslim-cap:before { content: "\f112"; }
+// .flaticon-muhammad-word:before { content: "\f111"; }
+
+.flaticon-arabic-art:before,
+.ion-ios-flaticon-arabic-art:before ,
+.ion-ios-flaticon-arabic-art-outline:before ,
+.ion-md-flaticon-arabic-art:before ,
+.ion-md-flaticon-arabic-art-outline:before { content: "\f101"; font-family:Flaticon;}
+
+/*.flaticon-muslim-cap:before { content: "\f112"; }**/
 .flaticon-muslim-tasbih:before { content: "\f113"; }
 .flaticon-palm-tree-with-date:before { content: "\f114"; }
 .flaticon-praying-mat:before { content: "\f115"; }

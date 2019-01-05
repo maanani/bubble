@@ -1,0 +1,55 @@
+<!--
+  Generated template for the DuaaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+    <ion-navbar>
+
+        <ion-title>الزيارة</ion-title>
+
+    </ion-navbar>
+    <ion-toolbar  color="light" no-border-top>
+        <ion-title></ion-title>
+        <ion-buttons right>
+              <button ion-button    clear color="favorite" outline icon-only class="marginTop" (click)="moveback()"><ion-icon name="arrow-dropleft-circle"></ion-icon></button>
+            </ion-buttons>    
+              <ion-buttons left>
+              <button ion-button     clear color="favorite"  outline icon-only  class="marginTop" (click)="moveNext()"><ion-icon name="arrow-dropright-circle"></ion-icon></button>
+       </ion-buttons>
+    </ion-toolbar>    
+</ion-header>
+
+<ion-content padding id="ZyaratPage" class="masters" dir="rtl" >
+ 
+    
+
+  <ion-slides  style="height: auto" #pageSlider (ionSlideDidChange)="onSlideMoved()" pager="false" dir="rtl">
+    <ion-slide *ngFor="let post of posts" >
+
+  <h2 [innerHTML]="post.title.rendered"></h2>
+  <ion-card class=newcard>  
+    <ion-card-content>
+        <span style="font-size:large;text-align: right;" [innerHTML]="post.content.rendered"></span>
+    </ion-card-content>
+
+</ion-card>  
+<!--
+  <ion-row >
+    <ion-col>
+      <button ion-button  end clear color="secondary" outline icon-only class="marginTop" (click)="moveback()"><ion-icon name="ios-arrow-dropleft"></ion-icon></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button  right clear color="secondary"  outline icon-only  class="marginTop" (click)="moveNext()"><ion-icon name="ios-arrow-dropright"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+-->
+
+    </ion-slide>
+
+  </ion-slides>
+  
+</ion-content>
